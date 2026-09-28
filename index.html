@@ -1,322 +1,69 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="theme-color" content="#152a34" />
-<meta name="description" content="غيم للشقق المفروشة — إقامة هادئة بتفاصيل أنيقة في بريدة، حي الفايزية." />
-<meta property="og:title" content="غيم للشقق المفروشة | بريدة" />
-<meta property="og:description" content="مساحتك الهادئة في بريدة." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#172b34">
+<meta name="description" content="غيم للشقق المفروشة — إقامة هادئة بتفاصيل فندقية في بريدة، حي الفايزية.">
+<meta property="og:title" content="غيم للشقق المفروشة | بريدة">
+<meta property="og:description" content="مساحتك الهادئة في بريدة.">
 <title>غيم | للشقق المفروشة — بريدة</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Marhey:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="assets/logo.png">
 <style>
-:root{
-  --navy:#152a34;
-  --navy2:#0e2028;
-  --sage:#9eae9b;
-  --sage-soft:#e9eee8;
-  --cream:#f7f4ee;
-  --paper:#fcfbf8;
-  --ink:#25363d;
-  --muted:#748087;
-  --line:#e7e3dc;
-  --white:#fff;
-  --wa:#22884b;
-  --shadow:0 22px 70px rgba(22,44,54,.14);
-  --radius:26px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:"Cairo",system-ui,sans-serif;line-height:1.85;-webkit-font-smoothing:antialiased;padding-bottom:84px}
-a{color:inherit;text-decoration:none}button{font:inherit}
-img{display:block;max-width:100%}
-.wrap{width:min(1120px,calc(100% - 32px));margin:auto}
-
-/* Top navigation */
-.topbar{position:fixed;z-index:100;inset:0 0 auto;padding-top:max(10px,env(safe-area-inset-top));transition:.3s ease}
-.nav-shell{height:58px;border-radius:20px;padding:0 8px 0 12px;display:flex;align-items:center;justify-content:space-between;gap:10px;background:rgba(15,31,39,.22);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);transition:.3s ease}
-.topbar.scrolled .nav-shell{background:rgba(252,251,248,.93);border-color:var(--line);box-shadow:0 14px 38px rgba(22,44,54,.08)}
-.brand{display:flex;align-items:center;gap:9px;color:#fff;font-weight:800;font-size:13px;min-width:0}
-.brand img{width:42px;height:42px;border-radius:14px;object-fit:contain;background:#fff}
-.topbar.scrolled .brand{color:var(--navy)}
-.header-cta{padding:9px 14px;border-radius:14px;background:#fff;color:var(--navy);font-weight:800;font-size:12px}
-.topbar.scrolled .header-cta{background:var(--navy);color:#fff}
-.menu-btn{width:42px;height:42px;border-radius:14px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);color:#fff;display:grid;place-items:center;cursor:pointer}
-.topbar.scrolled .menu-btn{border-color:var(--line);background:#fff;color:var(--navy)}
-.menu-btn span,.menu-btn span:before,.menu-btn span:after{display:block;width:17px;height:1.5px;background:currentColor;position:relative;transition:.2s}
-.menu-btn span:before,.menu-btn span:after{content:"";position:absolute;right:0}.menu-btn span:before{top:-6px}.menu-btn span:after{top:6px}
-.menu-panel{position:fixed;top:78px;right:16px;left:16px;max-height:0;overflow:hidden;opacity:0;transform:translateY(-6px);background:rgba(252,251,248,.98);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);transition:.28s ease}
-.menu-panel.open{max-height:330px;opacity:1;transform:none;padding:8px}
-.menu-panel a{display:block;padding:13px 14px;border-radius:15px;font-weight:700;color:var(--navy)}
-.menu-panel a:hover{background:var(--sage-soft)}
-
-/* Hero */
-.hero{position:relative;min-height:92svh;display:flex;align-items:flex-end;overflow:hidden;background:#0c1c23;color:#fff}
-.hero-media,.hero-media:before{position:absolute;inset:0}
-.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 45%;transform:scale(1.06);animation:heroZoom 15s ease-out forwards;filter:saturate(.84) contrast(.96)}
-.hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,20,27,.12) 0%,rgba(8,20,27,.22) 34%,rgba(8,20,27,.82) 100%)}
-@keyframes heroZoom{to{transform:scale(1)}}
-.hero-inner{position:relative;z-index:2;width:min(720px,calc(100% - 32px));margin:0 auto;padding:90px 0 56px;text-align:center}
-.hero-logo{width:88px;height:88px;border-radius:26px;background:#fff;padding:4px;margin:0 auto 16px;box-shadow:0 18px 55px rgba(0,0,0,.22);animation:rise .9s .05s both}
-.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;color:rgba(255,255,255,.85);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:7px 11px;backdrop-filter:blur(10px);animation:rise .9s .1s both}
-.eyebrow:before{content:"";width:6px;height:6px;border-radius:50%;background:#c0cdbd}
-.hero h1{font-family:"Marhey","Cairo",sans-serif;font-size:clamp(34px,10vw,58px);line-height:1.2;font-weight:600;margin:15px 0 9px;animation:rise .9s .17s both;text-shadow:0 10px 30px rgba(0,0,0,.27)}
-.hero p{font-size:14px;color:rgba(255,255,255,.87);max-width:560px;margin:0 auto 20px;animation:rise .9s .24s both}
-.hero-actions{display:flex;gap:9px;justify-content:center;animation:rise .9s .3s both}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 18px;border-radius:16px;font-weight:800;font-size:13px;transition:.22s;border:1px solid transparent}
-.btn:active{transform:scale(.98)}
-.btn-light{background:#fff;color:var(--navy);box-shadow:0 13px 30px rgba(0,0,0,.14)}
-.btn-glass{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.22);backdrop-filter:blur(10px)}
-.hero-tags{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin-top:17px;animation:rise .9s .37s both}
-.tag{font-size:10px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);color:rgba(255,255,255,.84);backdrop-filter:blur(10px)}
-.hero-bottom{position:absolute;z-index:3;bottom:12px;left:0;right:0;display:flex;justify-content:center;color:rgba(255,255,255,.62);font-size:10px}
-@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-
-/* Intro card */
-.intro-wrap{position:relative;z-index:5;margin-top:-28px}
-.intro-card{background:#fff;border:1px solid rgba(223,225,219,.94);border-radius:24px;padding:17px;box-shadow:0 20px 55px rgba(26,47,56,.11);display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.intro-item{padding:9px 10px;border-radius:17px;background:#fbfaf7;border:1px solid var(--line);text-align:center}
-.intro-item small{display:block;color:var(--muted);font-size:10px;margin-bottom:2px}.intro-item strong{color:var(--navy);font-size:13px}
-
-section{padding:74px 0}
-.section-head{text-align:center;max-width:670px;margin:0 auto 30px}
-.kicker{font-size:11px;font-weight:800;color:#71856f;letter-spacing:.04em;margin-bottom:5px}
-.section-head h2{font-size:clamp(28px,7vw,42px);line-height:1.27;margin:0 0 8px;color:var(--navy);font-weight:800}
-.section-head p{font-size:14px;color:var(--muted);margin:0}
-
-/* Story */
-.story{background:var(--cream)}
-.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}
-.story-image{position:relative}.story-image img{width:100%;height:520px;object-fit:cover;border-radius:28px;box-shadow:var(--shadow)}
-.story-badge{position:absolute;bottom:16px;right:16px;background:rgba(255,255,255,.91);padding:10px 13px;border-radius:16px;backdrop-filter:blur(10px);font-size:11px;color:var(--navy);font-weight:800;box-shadow:0 10px 28px rgba(0,0,0,.09)}
-.story-copy .section-head{text-align:right;margin:0 0 22px;max-width:none}
-.story-copy .section-head h2{font-size:clamp(27px,5vw,39px)}
-.story-copy .body{font-size:14px;color:var(--muted);margin:0}
-.detail-list{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:18px}.detail{padding:13px 14px;border-radius:17px;background:#fff;border:1px solid var(--line)}
-.detail strong{display:block;font-size:13px;color:var(--navy)}.detail span{font-size:11px;color:var(--muted)}
-
-/* Experience */
-.experience-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.ex-card{padding:20px 14px;text-align:center;border:1px solid var(--line);border-radius:21px;background:#fff;min-height:155px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(24,45,56,.045)}
-.ex-icon{width:45px;height:45px;border-radius:15px;background:var(--sage-soft);display:grid;place-items:center;font-size:19px;color:var(--navy);margin-bottom:9px}.ex-card h3{font-size:14px;color:var(--navy);margin:0 0 3px}.ex-card p{font-size:10px;color:var(--muted);margin:0}
-
-/* Gallery */
-.gallery{background:#fff}
-.gallery-rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(74%,1fr);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:3px 2px 8px;margin:0 -2px;scrollbar-width:none}
-.gallery-rail::-webkit-scrollbar{display:none}
-.photo{scroll-snap-align:start;position:relative;aspect-ratio:3/4;border:0;padding:0;border-radius:24px;overflow:hidden;background:#ddd;cursor:pointer;box-shadow:0 16px 35px rgba(26,47,56,.1)}
-.photo img{width:100%;height:100%;object-fit:cover;transition:.5s}.photo:active img{transform:scale(1.015)}
-.photo-label{position:absolute;right:11px;bottom:11px;padding:7px 10px;border-radius:12px;background:rgba(15,32,40,.7);color:#fff;font-size:10px;backdrop-filter:blur(10px)}
-.gallery-note{display:flex;justify-content:center;align-items:center;gap:7px;color:var(--muted);font-size:10px;margin-top:12px}
-
-/* Booking */
-.booking{background:linear-gradient(180deg,#fff 0%,#eef2ed 100%)}
-.booking-box{background:linear-gradient(145deg,var(--navy),var(--navy2));border-radius:31px;padding:28px 18px;box-shadow:0 25px 70px rgba(19,42,52,.21);color:#fff;position:relative;overflow:hidden}
-.booking-box:before,.booking-box:after{content:"";position:absolute;border:1px solid rgba(178,192,173,.16);border-radius:50%}.booking-box:before{width:300px;height:300px;left:-190px;top:-160px}.booking-box:after{width:230px;height:230px;right:-150px;bottom:-130px}
-.booking-head{position:relative;z-index:1;text-align:center;max-width:650px;margin:0 auto 22px}.booking-head .kicker{color:#bdcbb8}.booking-head h2{font-size:clamp(27px,7vw,39px);color:#fff}.booking-head p{font-size:13px;color:rgba(255,255,255,.7);margin:0}
-.platforms{position:relative;z-index:1;display:grid;gap:9px}
-.platform{display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:12px;padding:14px;border:1px solid rgba(255,255,255,.13);border-radius:19px;background:rgba(255,255,255,.065);transition:.2s}
-.platform:active{transform:scale(.99)}
-.platform-badge{width:52px;height:52px;border-radius:16px;background:#fff;color:var(--navy);display:grid;place-items:center;font-size:16px;font-weight:800}.platform h3{font-size:15px;margin:0 0 2px}.platform p{font-size:10px;color:rgba(255,255,255,.58);margin:0}.platform-go{font-size:11px;color:#d7e0d5;font-weight:800;white-space:nowrap}
-.direct-box{position:relative;z-index:1;margin-top:12px;padding:15px;border-radius:20px;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.045);text-align:center}.direct-box strong{display:block;font-size:13px;margin-bottom:8px}.wa-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--wa);color:#fff;padding:12px 15px;border-radius:14px;font-weight:800;font-size:13px}
-
-/* Location */
-.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-.location-card{border:1px solid var(--line);background:#fff;border-radius:26px;padding:24px;box-shadow:0 14px 38px rgba(23,44,55,.05)}
-.location-card h2{font-size:28px;margin:0 0 10px;color:var(--navy)}.location-copy{color:var(--muted);font-size:13px;margin:0 0 16px}.location-fact{padding:11px 13px;border-radius:14px;background:#fbfaf7;border:1px solid var(--line);margin-bottom:8px}.location-fact small{display:block;color:var(--muted);font-size:9px}.location-fact strong{font-size:12px;color:var(--navy)}
-.map-card{border-radius:26px;min-height:350px;background:radial-gradient(circle at 40% 40%,rgba(158,174,155,.16),transparent 35%),linear-gradient(135deg,#f0f3ef,#faf8f3);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;text-align:center;padding:25px}
-.map-mark{width:68px;height:68px;border-radius:22px;background:#fff;box-shadow:var(--shadow);display:grid;place-items:center;font-size:27px;color:var(--navy);margin:0 auto 12px}.map-card h3{margin:0;color:var(--navy);font-size:17px}.map-card p{margin:4px 0 15px;color:var(--muted);font-size:12px}
-
-/* Footer */
-footer{background:var(--navy);color:#fff;padding:30px 0 38px}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:16px}.footer-brand{display:flex;align-items:center;gap:10px}.footer-brand img{width:42px;height:42px;border-radius:13px;background:#fff}.footer-brand strong{font-size:13px}.footer-small{font-size:10px;color:rgba(255,255,255,.56)}
-.footer-links{display:flex;gap:8px}.round{width:36px;height:36px;border-radius:12px;background:rgba(255,255,255,.08);display:grid;place-items:center;font-size:14px}
-
-/* Lightbox */
-.lightbox{position:fixed;inset:0;background:rgba(4,13,17,.94);z-index:200;display:none;align-items:center;justify-content:center;padding:18px}.lightbox.open{display:flex}.lightbox img{width:auto;height:auto;max-width:100%;max-height:86vh;object-fit:contain;border-radius:18px}.close{position:absolute;top:max(18px,env(safe-area-inset-top));right:16px;width:44px;height:44px;border:1px solid rgba(255,255,255,.18);border-radius:14px;background:rgba(255,255,255,.08);color:#fff;font-size:30px;line-height:1;cursor:pointer}
-
-/* Mobile bottom bar */
-.bottom-dock{position:fixed;z-index:120;right:12px;left:12px;bottom:max(10px,env(safe-area-inset-bottom));display:grid;grid-template-columns:1.15fr 1fr;gap:8px;padding:8px;background:rgba(252,251,248,.93);border:1px solid var(--line);box-shadow:0 14px 45px rgba(19,42,52,.15);border-radius:20px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
-.dock-btn{display:flex;align-items:center;justify-content:center;min-height:44px;border-radius:14px;font-weight:800;font-size:12px}.dock-book{background:var(--navy);color:#fff}.dock-wa{background:#e8f6ed;color:#176738}
-
-.reveal{opacity:0;transform:translateY(16px);transition:.7s ease}.reveal.visible{opacity:1;transform:none}
-
-@media (max-width: 760px){
-  .wrap{width:min(100% - 28px,640px)}
-  .hero{min-height:84svh}.hero-inner{padding-bottom:47px}
-  .intro-wrap{margin-top:-18px}
-  .story-grid,.location-grid{grid-template-columns:1fr}
-  .story-image{order:0}.story-image img{height:470px}.story-copy{order:1}
-  .experience-grid{grid-template-columns:1fr 1fr}
-  .gallery-rail{grid-auto-columns:minmax(82%,1fr)}
-  .location-card{padding:20px}.map-card{min-height:290px}
-  .footer-row{flex-direction:column;align-items:flex-start}
-}
-
-@media (min-width: 761px){
-  body{padding-bottom:0}
-  .menu-btn,.menu-panel,.bottom-dock{display:none}
-  .nav-shell{background:rgba(15,31,39,.2)}
-  .brand{font-size:14px}.brand img{width:44px;height:44px}
-  .header-cta{padding:10px 16px}
-  .hero-inner{padding-top:120px;padding-bottom:78px}
-  .hero-logo{width:112px;height:112px;border-radius:30px}
-  .platforms{grid-template-columns:repeat(3,1fr)}
-  .gallery-rail{grid-auto-flow:initial;grid-template-columns:repeat(3,1fr);overflow:visible}
-  .photo{aspect-ratio:4/5}.photo:nth-child(1){grid-row:span 2;aspect-ratio:auto}.photo:nth-child(1) img{height:100%}
-}
-
-@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+:root{--ink:#1b3038;--ink2:#10232b;--sage:#aab8a4;--sage2:#edf1eb;--cream:#f7f4ee;--paper:#fcfbf8;--muted:#7b8588;--line:#e8e5de;--gold:#b6a17a;--wa:#21884b;--white:#fff;--shadow:0 24px 70px rgba(17,40,49,.13);--r:28px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Cairo,system-ui,sans-serif;line-height:1.8;-webkit-font-smoothing:antialiased;padding-bottom:88px}a{color:inherit;text-decoration:none}button{font:inherit}img{display:block;max-width:100%}.wrap{width:min(1120px,calc(100% - 30px));margin:auto}.desktop{display:none}
+/* HEADER */
+.header{position:fixed;z-index:100;top:0;left:0;right:0;padding:10px 0 env(safe-area-inset-top);transition:.3s}.nav{height:58px;border:1px solid rgba(255,255,255,.17);background:rgba(11,27,34,.2);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-radius:20px;display:flex;align-items:center;justify-content:space-between;padding:5px 7px 5px 12px;color:#fff;transition:.3s}.header.scrolled .nav{background:rgba(252,251,248,.95);border-color:var(--line);box-shadow:0 14px 40px rgba(17,40,49,.08);color:var(--ink)}.brand{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:800}.brand img{width:43px;height:43px;border-radius:14px;background:#fff;object-fit:contain}.head-btn{height:42px;padding:0 14px;border:0;border-radius:14px;background:#fff;color:var(--ink);font-weight:800;font-size:12px}.header.scrolled .head-btn{background:var(--ink);color:#fff}.menu{width:42px;height:42px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:inherit;border-radius:14px;display:grid;place-items:center}.header.scrolled .menu{background:#fff;border-color:var(--line)}.hamb,.hamb:before,.hamb:after{width:17px;height:1.5px;background:currentColor;display:block;position:relative}.hamb:before,.hamb:after{content:"";position:absolute;right:0}.hamb:before{top:-6px}.hamb:after{top:6px}.drawer{position:fixed;top:77px;right:15px;left:15px;z-index:99;background:rgba(252,251,248,.98);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:7px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:.25s}.drawer.open{opacity:1;visibility:visible;transform:none}.drawer a{display:block;padding:13px 14px;border-radius:15px;font-weight:700;color:var(--ink)}.drawer a:hover{background:var(--sage2)}
+/* HERO */
+.hero{min-height:94svh;background:#0c1b22;color:#fff;position:relative;overflow:hidden;display:flex;align-items:flex-end}.hero-media{position:absolute;inset:0}.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 48%;filter:saturate(.78) contrast(.96);transform:scale(1.07);animation:zoom 14s ease-out forwards}.hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,20,25,.12),rgba(8,20,25,.12) 34%,rgba(7,18,24,.9) 100%)}@keyframes zoom{to{transform:scale(1)}}.hero-content{position:relative;z-index:2;width:min(760px,calc(100% - 30px));margin:auto;text-align:center;padding:105px 0 56px}.hero-logo{width:94px;height:94px;object-fit:contain;background:#fff;border-radius:27px;padding:4px;margin:0 auto 17px;box-shadow:0 18px 60px rgba(0,0,0,.25);animation:up .8s .05s both}.pill{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);backdrop-filter:blur(10px);border-radius:999px;font-size:10px;font-weight:700;animation:up .8s .12s both}.pill i{width:6px;height:6px;border-radius:50%;background:#c8d3c4}.hero h1{font-family:Marhey,Cairo,sans-serif;font-weight:500;font-size:clamp(34px,10vw,62px);line-height:1.25;margin:13px 0 8px;text-shadow:0 12px 32px rgba(0,0,0,.25);animation:up .8s .18s both}.hero p{font-size:13px;color:rgba(255,255,255,.82);max-width:590px;margin:0 auto 19px;animation:up .8s .24s both}.hero-actions{display:flex;gap:8px;justify-content:center;animation:up .8s .3s both}.btn{min-height:48px;padding:0 18px;border-radius:16px;border:1px solid transparent;display:inline-flex;align-items:center;justify-content:center;gap:7px;font-size:12px;font-weight:800;transition:.2s}.btn:active{transform:scale(.98)}.btn-white{background:#fff;color:var(--ink)}.btn-glass{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:#fff;backdrop-filter:blur(10px)}.hero-mini{display:flex;justify-content:center;flex-wrap:wrap;gap:7px;margin-top:16px;animation:up .8s .36s both}.mini{font-size:9px;padding:6px 10px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.07);border-radius:999px;color:rgba(255,255,255,.8)}.scroll-note{position:absolute;bottom:13px;left:0;right:0;text-align:center;color:rgba(255,255,255,.55);font-size:9px}@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+/* FLOAT CARD */
+.float-wrap{position:relative;z-index:5;margin-top:-31px}.float-card{background:#fff;border:1px solid var(--line);border-radius:25px;padding:14px;box-shadow:0 22px 60px rgba(17,40,49,.12);display:grid;grid-template-columns:1fr 1fr;gap:8px}.stat{background:#fbfaf7;border:1px solid var(--line);border-radius:17px;text-align:center;padding:9px}.stat span{display:block;font-size:9px;color:var(--muted)}.stat strong{font-size:12px;color:var(--ink)}
+/* SECTIONS */
+section{padding:78px 0}.head{text-align:center;max-width:680px;margin:0 auto 29px}.eyebrow{font-size:10px;color:#70836d;font-weight:800;letter-spacing:.05em}.head h2{font-size:clamp(28px,7vw,45px);line-height:1.28;color:var(--ink);margin:5px 0 8px;font-weight:800}.head p{font-size:13px;color:var(--muted);margin:0}
+/* STORY */
+.story{background:var(--cream)}.story-grid{display:grid;gap:28px;align-items:center}.story-photo{position:relative}.story-photo img{width:100%;height:470px;object-fit:cover;border-radius:30px;box-shadow:var(--shadow)}.photo-tag{position:absolute;right:15px;bottom:15px;background:rgba(255,255,255,.92);padding:9px 12px;border-radius:14px;font-size:10px;font-weight:800;color:var(--ink);backdrop-filter:blur(10px)}.story-copy{text-align:right}.story-copy .head{text-align:right;margin:0 0 17px}.story-copy .head h2{font-size:clamp(27px,7vw,39px)}.story-copy .body{font-size:13px;color:var(--muted);margin:0}.facts{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:17px}.fact{background:#fff;border:1px solid var(--line);border-radius:17px;padding:13px}.fact strong{display:block;color:var(--ink);font-size:12px}.fact span{display:block;color:var(--muted);font-size:10px;margin-top:1px}
+/* AMENITIES */
+.amenities{background:#fff}.amenity-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.amenity{border:1px solid var(--line);background:#fff;border-radius:20px;padding:19px 13px;text-align:center;min-height:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(17,40,49,.035)}.amenity-icon{width:45px;height:45px;border-radius:15px;background:var(--sage2);display:grid;place-items:center;font-size:19px;margin-bottom:8px}.amenity h3{font-size:13px;color:var(--ink);margin:0 0 3px}.amenity p{font-size:9px;color:var(--muted);margin:0}
+/* GALLERY */
+.gallery{background:#fff;padding-top:15px}.gallery-track{display:grid;grid-auto-flow:column;grid-auto-columns:82%;gap:11px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:3px 1px 10px}.gallery-track::-webkit-scrollbar{display:none}.shot{position:relative;scroll-snap-align:start;border:0;padding:0;border-radius:25px;overflow:hidden;aspect-ratio:3/4;background:#ddd;box-shadow:0 17px 38px rgba(17,40,49,.11);cursor:pointer}.shot img{width:100%;height:100%;object-fit:cover;transition:.45s}.shot:active img{transform:scale(1.02)}.shot-label{position:absolute;right:11px;bottom:11px;background:rgba(13,29,36,.7);color:#fff;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:6px 9px;font-size:9px;backdrop-filter:blur(10px)}.gallery-hint{text-align:center;color:var(--muted);font-size:9px;margin-top:8px}
+/* RESERVATION */
+.reserve{background:linear-gradient(180deg,#fff,#edf1ec)}.reserve-shell{background:linear-gradient(145deg,#1b343e,#10252d);border-radius:32px;padding:28px 16px;box-shadow:0 26px 75px rgba(16,38,47,.2);color:#fff;position:relative;overflow:hidden}.reserve-shell:before{content:"";position:absolute;width:280px;height:280px;border:1px solid rgba(194,205,190,.12);border-radius:50%;top:-180px;left:-130px}.reserve-head{position:relative;text-align:center;margin-bottom:21px}.reserve-head .eyebrow{color:#c6d0c1}.reserve-head h2{font-size:clamp(28px,7vw,42px);line-height:1.25;margin:5px 0;color:#fff}.reserve-head p{font-size:12px;color:rgba(255,255,255,.67);margin:0}.channels{position:relative;display:grid;gap:8px}.channel{display:grid;grid-template-columns:49px 1fr auto;align-items:center;gap:11px;padding:12px;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.06);border-radius:19px;transition:.2s}.channel:active{transform:scale(.99)}.channel-logo{width:49px;height:49px;background:#fff;color:var(--ink);border-radius:15px;display:grid;place-items:center;font-size:16px;font-weight:800}.channel h3{font-size:14px;margin:0 0 1px}.channel p{font-size:9px;color:rgba(255,255,255,.55);margin:0}.go{font-size:10px;color:#d8e1d6;font-weight:800}.direct{position:relative;margin-top:10px;border:1px solid rgba(255,255,255,.13);border-radius:20px;padding:14px;background:rgba(255,255,255,.045);text-align:center}.direct strong{font-size:12px;display:block;margin-bottom:8px}.wa{display:flex;justify-content:center;align-items:center;min-height:44px;background:var(--wa);color:#fff;border-radius:14px;font-size:12px;font-weight:800}
+/* LOCATION */
+.location{background:var(--paper)}.loc-grid{display:grid;gap:12px}.loc-card,.map-card{border:1px solid var(--line);border-radius:27px;background:#fff;padding:23px}.loc-card h2{font-size:28px;line-height:1.35;color:var(--ink);margin:3px 0 8px}.loc-card p{font-size:12px;color:var(--muted);margin:0 0 15px}.loc-fact{background:#fbfaf7;border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin-bottom:8px}.loc-fact small{display:block;color:var(--muted);font-size:9px}.loc-fact strong{color:var(--ink);font-size:11px}.map-card{min-height:285px;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 50% 42%,rgba(170,184,164,.2),transparent 38%),linear-gradient(135deg,#f1f3ef,#faf8f3)}.pin{width:65px;height:65px;border-radius:21px;background:#fff;box-shadow:var(--shadow);display:grid;place-items:center;font-size:25px;margin:0 auto 11px}.map-card h3{font-size:16px;margin:0;color:var(--ink)}.map-card p{font-size:11px;color:var(--muted);margin:3px 0 14px}
+/* FOOTER */
+footer{background:var(--ink2);color:#fff;padding:32px 0 40px}.footer{display:flex;flex-direction:column;gap:20px}.foot-brand{display:flex;align-items:center;gap:10px}.foot-brand img{width:45px;height:45px;background:#fff;border-radius:14px}.foot-brand strong{font-size:13px}.foot-brand small{display:block;color:rgba(255,255,255,.52);font-size:9px}.foot-row{display:flex;justify-content:space-between;align-items:center;gap:12px}.foot-copy{font-size:9px;color:rgba(255,255,255,.45)}.social{display:flex;gap:7px}.social a{width:37px;height:37px;border-radius:12px;background:rgba(255,255,255,.08);display:grid;place-items:center;font-size:14px}
+/* DOCK + LIGHTBOX */
+.dock{position:fixed;z-index:110;right:12px;left:12px;bottom:max(9px,env(safe-area-inset-bottom));padding:7px;background:rgba(252,251,248,.94);border:1px solid var(--line);border-radius:20px;box-shadow:0 15px 45px rgba(17,40,49,.16);backdrop-filter:blur(18px);display:grid;grid-template-columns:1.12fr 1fr;gap:7px}.dock a{min-height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800}.dock-book{background:var(--ink);color:#fff}.dock-wa{background:#e7f5eb;color:#17683a}.lightbox{position:fixed;inset:0;z-index:200;background:rgba(3,12,16,.95);display:none;align-items:center;justify-content:center;padding:16px}.lightbox.open{display:flex}.lightbox img{max-width:100%;max-height:87vh;border-radius:18px;object-fit:contain}.close{position:absolute;top:max(16px,env(safe-area-inset-top));right:15px;width:44px;height:44px;border:1px solid rgba(255,255,255,.18);border-radius:14px;background:rgba(255,255,255,.08);color:#fff;font-size:28px}.reveal{opacity:0;transform:translateY(15px);transition:.7s ease}.reveal.visible{opacity:1;transform:none}
+@media(min-width:760px){body{padding-bottom:0}.wrap{width:min(1120px,calc(100% - 48px))}.menu,.drawer,.dock{display:none}.desktop{display:flex}.nav{padding-left:7px}.brand{font-size:13px}.desktop-nav{display:flex;gap:4px;margin-right:auto;margin-left:15px}.desktop-nav a{padding:9px 11px;border-radius:12px;font-size:11px;font-weight:700}.desktop-nav a:hover{background:rgba(255,255,255,.1)}.header.scrolled .desktop-nav a:hover{background:var(--sage2)}.hero-content{padding-bottom:82px}.hero-logo{width:112px;height:112px}.float-card{grid-template-columns:repeat(4,1fr);padding:10px}.story-grid{grid-template-columns:1fr 1fr}.story-photo img{height:570px}.amenity-grid{grid-template-columns:repeat(4,1fr)}.gallery-track{grid-auto-flow:initial;grid-template-columns:repeat(3,1fr);overflow:visible}.shot{aspect-ratio:4/5}.shot:first-child{grid-row:span 2;aspect-ratio:auto}.shot:first-child img{height:100%}.channels{grid-template-columns:repeat(3,1fr)}.loc-grid{grid-template-columns:1fr 1fr}.footer{flex-direction:row;align-items:center;justify-content:space-between}.hero{min-height:92svh}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<header class="topbar" id="topbar">
-  <div class="wrap">
-    <div class="nav-shell">
-      <a class="brand" href="#home" aria-label="غيم للشقق المفروشة">
-        <img src="assets/logo.png" alt="شعار غيم">
-        <span>غيم للشقق المفروشة</span>
-      </a>
-      <a class="header-cta" href="#booking">احجز الآن</a>
-      <button class="menu-btn" id="menuBtn" aria-label="فتح القائمة" aria-expanded="false"><span></span></button>
-    </div>
-  </div>
-  <div class="menu-panel" id="menuPanel">
-    <a href="#about">عن غيم</a>
-    <a href="#experience">مميزات الإقامة</a>
-    <a href="#gallery">الصور</a>
-    <a href="#booking">الحجز</a>
-    <a href="#location">الموقع</a>
-  </div>
-</header>
-
+<header class="header" id="header"><div class="wrap"><div class="nav"><a class="brand" href="#home"><img src="assets/logo.png" alt="شعار غيم"><span>غيم للشقق المفروشة</span></a><nav class="desktop desktop-nav"><a href="#about">عن غيم</a><a href="#experience">التجربة</a><a href="#gallery">الصور</a><a href="#booking">الحجز</a><a href="#location">الموقع</a></nav><a class="head-btn" href="#booking">احجز الآن</a><button class="menu" id="menu" aria-label="القائمة" aria-expanded="false"><span class="hamb"></span></button></div></div><div class="drawer" id="drawer"><a href="#about">عن غيم</a><a href="#experience">تجربة الإقامة</a><a href="#gallery">الصور</a><a href="#booking">الحجز</a><a href="#location">الموقع</a></div></header>
 <main>
-<section class="hero" id="home">
-  <div class="hero-media"><img src="assets/living-1.jpg" alt="صالة شقة غيم" fetchpriority="high"></div>
-  <div class="hero-inner">
-    <img class="hero-logo" src="assets/logo.png" alt="غيم">
-    <div class="eyebrow">القصيم · بريدة · حي الفايزية</div>
-    <h1>مساحتك الهادئة في بريدة</h1>
-    <p>إقامة مريحة بتفاصيل أنيقة، وأجواء هادئة، وخصوصية تمنحك شعور المنزل من أول لحظة.</p>
-    <div class="hero-actions">
-      <a class="btn btn-light" href="#booking">احجز إقامتك <span>←</span></a>
-      <a class="btn btn-glass" href="#gallery">شاهد الشقة</a>
-    </div>
-    <div class="hero-tags"><span class="tag">غرفة نوم</span><span class="tag">صالة</span><span class="tag">ركن قهوة</span><span class="tag">موقف خاص</span></div>
-  </div>
-  <div class="hero-bottom">مرر لاكتشاف غيم</div>
-</section>
-
-<div class="wrap intro-wrap reveal">
-  <div class="intro-card">
-    <div class="intro-item"><small>الموقع</small><strong>بريدة · الفايزية</strong></div>
-    <div class="intro-item"><small>الحجز</small><strong>منصات موثوقة + واتساب</strong></div>
-    <div class="intro-item"><small>الجو العام</small><strong>هادئ وأنيق</strong></div>
-    <div class="intro-item"><small>الخصوصية</small><strong>إقامة مريحة ومستقلة</strong></div>
-  </div>
-</div>
-
-<section id="about" class="story">
-  <div class="wrap story-grid">
-    <div class="story-image reveal"><img src="assets/living-2.jpg" alt="جلسة شقة غيم" loading="lazy"><div class="story-badge">ضيافة هادئة · تفاصيل مدروسة</div></div>
-    <div class="story-copy reveal">
-      <div class="section-head"><div class="kicker">غيم · بريدة</div><h2>راحة تشبه البيت، وأناقة تستحق الإقامة.</h2><p>صُممت شقة غيم لمن يبحث عن إقامة مريحة في موقع مميز بمدينة بريدة، مع تفاصيل دافئة ولمسات بسيطة تمنحك أجواء هادئة طوال إقامتك.</p></div>
-      <p class="body">من أول دخولك وحتى لحظة المغادرة، ستجد مساحة مرتبة ومجهزة للاستمتاع بإقامة قصيرة أو عملية، بعيدًا عن التعقيد وبقرب الخدمات.</p>
-      <div class="detail-list">
-        <div class="detail"><strong>🛏 غرفة نوم</strong><span>مساحة هادئة ومريحة</span></div>
-        <div class="detail"><strong>🛋 صالة مريحة</strong><span>جلسة دافئة للراحة</span></div>
-        <div class="detail"><strong>☕ ركن قهوة</strong><span>تفاصيل ضيافة لطيفة</span></div>
-        <div class="detail"><strong>🚗 موقف خاص</strong><span>سهولة الوصول للمبنى</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="experience">
-  <div class="wrap">
-    <div class="section-head reveal"><div class="kicker">تجربة غيم</div><h2>كل ما تحتاجه لإقامة مريحة</h2><p>تفاصيل بسيطة، لكنها تصنع فرقًا في تجربة الإقامة.</p></div>
-    <div class="experience-grid">
-      <div class="ex-card reveal"><div class="ex-icon">⌂</div><h3>خصوصية وهدوء</h3><p>مساحة تمنحك راحة أكبر.</p></div>
-      <div class="ex-card reveal"><div class="ex-icon">☕</div><h3>ركن قهوة</h3><p>لمسة منزلية لطيفة.</p></div>
-      <div class="ex-card reveal"><div class="ex-icon">▣</div><h3>موقف خاص</h3><p>سهولة الوصول للمبنى.</p></div>
-      <div class="ex-card reveal"><div class="ex-icon">⌖</div><h3>موقع مميز</h3><p>حي الفايزية · بريدة.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="gallery" class="gallery">
-  <div class="wrap">
-    <div class="section-head reveal"><div class="kicker">تفاصيل غيم</div><h2>شاهد المكان قبل وصولك</h2><p>صور حقيقية للشقة، لتتعرف على المساحات والتفاصيل بكل وضوح.</p></div>
-    <div class="gallery-rail">
-      <button class="photo reveal" data-full="assets/living-1.jpg" aria-label="تكبير صورة الصالة"><img src="assets/living-1.jpg" alt="الصالة" loading="lazy"><span class="photo-label">الصالة</span></button>
-      <button class="photo reveal" data-full="assets/living-2.jpg" aria-label="تكبير صورة الجلسة"><img src="assets/living-2.jpg" alt="جلسة الصالة" loading="lazy"><span class="photo-label">الجلسة</span></button>
-      <button class="photo reveal" data-full="assets/bedroom.jpg" aria-label="تكبير صورة غرفة النوم"><img src="assets/bedroom.jpg" alt="غرفة النوم" loading="lazy"><span class="photo-label">غرفة النوم</span></button>
-      <button class="photo reveal" data-full="assets/coffee.jpg" aria-label="تكبير صورة ركن القهوة"><img src="assets/coffee.jpg" alt="ركن القهوة" loading="lazy"><span class="photo-label">التفاصيل</span></button>
-      <button class="photo reveal" data-full="assets/entrance.jpg" aria-label="تكبير صورة المدخل"><img src="assets/entrance.jpg" alt="مدخل الشقة" loading="lazy"><span class="photo-label">المدخل</span></button>
-      <button class="photo reveal" data-full="assets/dressing.jpg" aria-label="تكبير صورة التسريحة وخزانة الملابس"><img src="assets/dressing.jpg" alt="التسريحة وخزانة الملابس" loading="lazy"><span class="photo-label">غرفة النوم</span></button>
-    </div>
-    <div class="gallery-note">اسحب يمينًا ويسارًا لمشاهدة جميع الصور · اضغط على الصورة لتكبيرها</div>
-  </div>
-</section>
-
-<section id="booking" class="booking">
-  <div class="wrap">
-    <div class="booking-box reveal">
-      <div class="booking-head"><div class="kicker">احجز بسهولة</div><h2>إقامتك تبدأ من هنا</h2><p>اختر المنصة التي تفضلها، أو تواصل معنا مباشرة عبر واتساب.</p></div>
-      <div class="platforms">
-        <a class="platform" href="https://gathern.co/link/view?id=195865&check_in=2026-09-28&check_out=2026-09-29" target="_blank" rel="noopener"><div class="platform-badge">ج</div><div><h3>جاذر إن</h3><p>احجز إقامتك عبر جاذر إن</p></div><span class="platform-go">فتح ↗</span></a>
-        <a class="platform" href="https://www.airbnb.com/h/ghiim" target="_blank" rel="noopener"><div class="platform-badge">A</div><div><h3>Airbnb</h3><p>شاهد التفاصيل والتوافر</p></div><span class="platform-go">فتح ↗</span></a>
-        <a class="platform" href="https://www.booking.com/Share-6bHACM" target="_blank" rel="noopener"><div class="platform-badge">B</div><div><h3>Booking.com</h3><p>احجز عبر Booking.com</p></div><span class="platform-go">فتح ↗</span></a>
-      </div>
-      <div class="direct-box"><strong>تفضّل الحجز أو الاستفسار مباشرة؟</strong><a class="wa-btn" href="https://wa.me/966562018166?text=السلام%20عليكم،%20أرغب%20بالحجز%20أو%20الاستفسار%20عن%20شقة%20غيم%20في%20بريدة" target="_blank" rel="noopener">واتساب · 056 201 8166 ↗</a></div>
-    </div>
-  </div>
-</section>
-
-<section id="location">
-  <div class="wrap location-grid">
-    <div class="location-card reveal">
-      <div class="kicker">الوصول إلى غيم</div>
-      <h2>في حي الفايزية ببريدة</h2>
-      <p class="location-copy">موقع واضح وسهل الوصول مع توجيهات مباشرة عبر Google Maps.</p>
-      <div class="location-fact"><small>العنوان</small><strong>القصيم · بريدة · حي الفايزية</strong></div>
-      <div class="location-fact"><small>التوجيهات</small><strong>26.376101, 43.971199</strong></div>
-      <a class="btn" style="background:var(--navy);color:#fff;width:100%;margin-top:10px" href="https://maps.google.com/?q=26.376101,43.971199" target="_blank" rel="noopener">فتح الموقع في Google Maps ↗</a>
-    </div>
-    <div class="map-card reveal"><div><div class="map-mark">⌖</div><h3>غيم للشقق المفروشة</h3><p>بريدة · حي الفايزية</p><a class="btn" style="background:#fff;color:var(--navy);border:1px solid var(--line)" href="https://maps.google.com/?q=26.376101,43.971199" target="_blank" rel="noopener">عرض التوجيهات</a></div></div>
-  </div>
-</section>
+<section class="hero" id="home"><div class="hero-media"><img src="assets/living-1.jpg" alt="صالة غيم" fetchpriority="high"></div><div class="hero-content"><img class="hero-logo" src="assets/logo.png" alt="غيم"><div class="pill"><i></i> القصيم · بريدة · حي الفايزية</div><h1>مساحتك الهادئة في بريدة</h1><p>إقامة أنيقة وهادئة، صُممت لتمنحك راحة تشبه البيت وتفاصيل تستحق الإقامة.</p><div class="hero-actions"><a class="btn btn-white" href="#booking">احجز إقامتك ←</a><a class="btn btn-glass" href="#gallery">اكتشف الشقة</a></div><div class="hero-mini"><span class="mini">غرفة نوم</span><span class="mini">صالة</span><span class="mini">ركن قهوة</span><span class="mini">موقف خاص</span></div></div><div class="scroll-note">اسحب للأعلى لاكتشاف غيم</div></section>
+<div class="wrap float-wrap reveal"><div class="float-card"><div class="stat"><span>المكان</span><strong>بريدة · الفايزية</strong></div><div class="stat"><span>الإقامة</span><strong>خصوصية وهدوء</strong></div><div class="stat"><span>الضيافة</span><strong>تفاصيل مرتبة</strong></div><div class="stat"><span>الحجز</span><strong>3 منصات + واتساب</strong></div></div></div>
+<section class="story" id="about"><div class="wrap story-grid"><div class="story-photo reveal"><img src="assets/living-2.jpg" alt="جلسة غيم" loading="lazy"><div class="photo-tag">ضيافة هادئة · تفاصيل مدروسة</div></div><div class="story-copy reveal"><div class="head"><div class="eyebrow">غيم · BURAIDAH</div><h2>مكان صُمم لتشعر أنك في بيتك… ولكن بتفاصيل أجمل.</h2><p>في غيم، جمعنا بين الراحة والهدوء واللمسات الأنيقة لنقدم لك إقامة بسيطة، مرتبة، ومريحة في قلب بريدة.</p></div><p class="body">سواء كانت إقامتك قصيرة أو لعدة أيام، ستجد مساحة مجهزة لتمنحك تجربة سلسة من لحظة الوصول وحتى المغادرة.</p><div class="facts"><div class="fact"><strong>خصوصية وهدوء</strong><span>مساحة مستقلة لأوقاتك الخاصة</span></div><div class="fact"><strong>تفاصيل مريحة</strong><span>تجهيزات ولمسات دافئة</span></div><div class="fact"><strong>موقع واضح</strong><span>حي الفايزية · بريدة</span></div><div class="fact"><strong>حجز سهل</strong><span>منصات موثوقة أو واتساب</span></div></div></div></div></section>
+<section class="amenities" id="experience"><div class="wrap"><div class="head reveal"><div class="eyebrow">تجربة غيم</div><h2>تفاصيل صغيرة تصنع إقامة أجمل</h2><p>كل ما تحتاجه لوقت هادئ ومريح، دون مبالغة أو تعقيد.</p></div><div class="amenity-grid"><div class="amenity reveal"><div class="amenity-icon">⌂</div><h3>خصوصية وهدوء</h3><p>أجواء مريحة لإقامتك</p></div><div class="amenity reveal"><div class="amenity-icon">☕</div><h3>ركن قهوة</h3><p>لمسة ضيافة منزلية</p></div><div class="amenity reveal"><div class="amenity-icon">▣</div><h3>موقف خاص</h3><p>سهولة الوصول للمبنى</p></div><div class="amenity reveal"><div class="amenity-icon">⌖</div><h3>موقع مميز</h3><p>حي الفايزية · بريدة</p></div></div></div></section>
+<section class="gallery" id="gallery"><div class="wrap"><div class="head reveal"><div class="eyebrow">تفاصيل غيم</div><h2>شاهد المكان قبل وصولك</h2><p>صور حقيقية للشقة، لتتعرف على المساحات والتفاصيل بكل وضوح.</p></div><div class="gallery-track"><button class="shot reveal" data-full="assets/living-1.jpg"><img src="assets/living-1.jpg" alt="الصالة" loading="lazy"><span class="shot-label">الصالة</span></button><button class="shot reveal" data-full="assets/living-2.jpg"><img src="assets/living-2.jpg" alt="الجلسة" loading="lazy"><span class="shot-label">الجلسة</span></button><button class="shot reveal" data-full="assets/bedroom.jpg"><img src="assets/bedroom.jpg" alt="غرفة النوم" loading="lazy"><span class="shot-label">غرفة النوم</span></button><button class="shot reveal" data-full="assets/dressing.jpg"><img src="assets/dressing.jpg" alt="التسريحة وخزانة الملابس" loading="lazy"><span class="shot-label">التفاصيل</span></button><button class="shot reveal" data-full="assets/coffee.jpg"><img src="assets/coffee.jpg" alt="ركن القهوة" loading="lazy"><span class="shot-label">ركن القهوة</span></button><button class="shot reveal" data-full="assets/entrance.jpg"><img src="assets/entrance.jpg" alt="المدخل" loading="lazy"><span class="shot-label">المدخل</span></button></div><div class="gallery-hint">اسحب يمينًا ويسارًا · واضغط على الصورة لتكبيرها</div></div></section>
+<section class="reserve" id="booking"><div class="wrap"><div class="reserve-shell reveal"><div class="reserve-head"><div class="eyebrow">احجز بسهولة</div><h2>اختر طريقتك المفضلة للإقامة</h2><p>الحجز متاح عبر المنصات الموثوقة أو مباشرة عبر واتساب.</p></div><div class="channels"><a class="channel" href="https://gathern.co/link/view?id=195865&check_in=2026-09-28&check_out=2026-09-29" target="_blank" rel="noopener"><div class="channel-logo">ج</div><div><h3>جاذر إن</h3><p>الحجز عبر صفحة غيم</p></div><span class="go">فتح ↗</span></a><a class="channel" href="https://www.airbnb.com/h/ghiim" target="_blank" rel="noopener"><div class="channel-logo">A</div><div><h3>Airbnb</h3><p>التفاصيل والتوافر</p></div><span class="go">فتح ↗</span></a><a class="channel" href="https://www.booking.com/Share-6bHACM" target="_blank" rel="noopener"><div class="channel-logo">B</div><div><h3>Booking.com</h3><p>الحجز عبر Booking</p></div><span class="go">فتح ↗</span></a></div><div class="direct"><strong>تفضّل الحجز أو الاستفسار مباشرة؟</strong><a class="wa" href="https://wa.me/966562018166?text=السلام%20عليكم،%20أرغب%20بالحجز%20أو%20الاستفسار%20عن%20شقة%20غيم%20في%20بريدة" target="_blank" rel="noopener">واتساب · 056 201 8166 ↗</a></div></div></div></section>
+<section class="location" id="location"><div class="wrap"><div class="head reveal"><div class="eyebrow">الوصول إلى غيم</div><h2>موقع واضح وسهل الوصول</h2><p>القصيم · بريدة · حي الفايزية</p></div><div class="loc-grid"><div class="loc-card reveal"><h2>غيم في بريدة</h2><p>افتح التوجيهات مباشرة في Google Maps للوصول إلى موقع الشقة.</p><div class="loc-fact"><small>العنوان</small><strong>القصيم · بريدة · حي الفايزية</strong></div><div class="loc-fact"><small>الإحداثيات</small><strong>26.376101, 43.971199</strong></div><a class="btn" style="background:var(--ink);color:#fff;width:100%;margin-top:7px" href="https://maps.google.com/?q=26.376101,43.971199" target="_blank" rel="noopener">فتح الموقع في Google Maps ↗</a></div><div class="map-card reveal"><div><div class="pin">⌖</div><h3>غيم للشقق المفروشة</h3><p>حي الفايزية · بريدة</p><a class="btn" style="background:#fff;color:var(--ink);border-color:var(--line)" href="https://maps.google.com/?q=26.376101,43.971199" target="_blank" rel="noopener">عرض التوجيهات</a></div></div></div></div></section>
 </main>
-
-<footer>
-  <div class="wrap footer-row">
-    <div class="footer-brand"><img src="assets/logo.png" alt="شعار غيم"><div><strong>غيم للشقق المفروشة</strong><div class="footer-small">مساحتك الهادئة في بريدة</div></div></div>
-    <div class="footer-small">© 2026 غيم · جميع الحقوق محفوظة</div>
-    <div class="footer-links"><a class="round" href="https://wa.me/966562018166" target="_blank" rel="noopener" aria-label="واتساب">☏</a><a class="round" href="https://maps.google.com/?q=26.376101,43.971199" target="_blank" rel="noopener" aria-label="الموقع">⌖</a></div>
-  </div>
-</footer>
-
-<div class="bottom-dock" aria-label="إجراءات سريعة"><a class="dock-btn dock-book" href="#booking">احجز الآن</a><a class="dock-btn dock-wa" href="https://wa.me/966562018166?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20شقة%20غيم%20في%20بريدة" target="_blank" rel="noopener">واتساب</a></div>
-
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="عرض الصورة"><button class="close" id="closeBox" aria-label="إغلاق">×</button><img id="lightboxImg" src="" alt="صورة مكبرة"></div>
-
+<footer><div class="wrap footer"><div class="foot-brand"><img src="assets/logo.png" alt="شعار غيم"><div><strong>غيم للشقق المفروشة</strong><small>مساحتك الهادئة في بريدة</small></div></div><div class="foot-row"><div class="foot-copy">© 2026 غيم · جميع الحقوق محفوظة</div><div class="social"><a href="https://wa.me/966562018166" target="_blank" rel="noopener" aria-label="واتساب">☏</a><a href="https://maps.google.com/?q=26.376101,43.971199" target="_blank" rel="noopener" aria-label="الموقع">⌖</a></div></div></div></footer>
+<div class="dock"><a class="dock-book" href="#booking">احجز الآن</a><a class="dock-wa" href="https://wa.me/966562018166?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20شقة%20غيم%20في%20بريدة" target="_blank" rel="noopener">واتساب</a></div>
+<div class="lightbox" id="lightbox"><button class="close" id="close" aria-label="إغلاق">×</button><img id="big" alt="صورة مكبرة"></div>
 <script>
-const topbar=document.getElementById('topbar');
-const menuBtn=document.getElementById('menuBtn');
-const menuPanel=document.getElementById('menuPanel');
-function updateBar(){topbar.classList.toggle('scrolled',window.scrollY>28)}
-updateBar();window.addEventListener('scroll',updateBar,{passive:true});
-menuBtn?.addEventListener('click',()=>{const open=menuPanel.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open?'true':'false')});
-document.querySelectorAll('.menu-panel a').forEach(a=>a.addEventListener('click',()=>{menuPanel.classList.remove('open');menuBtn.setAttribute('aria-expanded','false')}));
-document.addEventListener('click',e=>{if(!menuPanel.contains(e.target)&&!menuBtn.contains(e.target))menuPanel.classList.remove('open')});
-const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')}),{threshold:.08});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-const box=document.getElementById('lightbox'),lightImg=document.getElementById('lightboxImg'),closeBox=document.getElementById('closeBox');
-document.querySelectorAll('.photo').forEach(card=>card.addEventListener('click',()=>{lightImg.src=card.dataset.full;box.classList.add('open');document.body.style.overflow='hidden'}));
-function closeLightbox(){box.classList.remove('open');lightImg.src='';document.body.style.overflow=''}
-closeBox.addEventListener('click',closeLightbox);box.addEventListener('click',e=>{if(e.target===box)closeLightbox()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
+const header=document.getElementById('header'),menu=document.getElementById('menu'),drawer=document.getElementById('drawer');
+const setHeader=()=>header.classList.toggle('scrolled',scrollY>28);setHeader();addEventListener('scroll',setHeader,{passive:true});
+menu.addEventListener('click',()=>{const o=drawer.classList.toggle('open');menu.setAttribute('aria-expanded',o?'true':'false')});
+drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{drawer.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
+document.addEventListener('click',e=>{if(!drawer.contains(e.target)&&!menu.contains(e.target))drawer.classList.remove('open')});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.08});document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+const lb=document.getElementById('lightbox'),big=document.getElementById('big'),close=document.getElementById('close');
+document.querySelectorAll('.shot').forEach(x=>x.addEventListener('click',()=>{big.src=x.dataset.full;lb.classList.add('open');document.body.style.overflow='hidden'}));
+function closeLb(){lb.classList.remove('open');big.src='';document.body.style.overflow=''}close.addEventListener('click',closeLb);lb.addEventListener('click',e=>{if(e.target===lb)closeLb()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb()});
 </script>
-</body>
-</html>
+</body></html>
