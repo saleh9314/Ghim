@@ -109,10 +109,16 @@ class AssetTests(unittest.TestCase):
             if tag != 'img' or not attrs.get('src'):
                 continue
             self.assertTrue(attrs['src'].startswith('assets/optimized/'))
-            self.assertTrue(attrs.get('sizes'))
             self.assertGreater(int(attrs['width']), 0)
             self.assertGreater(int(attrs['height']), 0)
             self.assertEqual(attrs.get('decoding'), 'async')
+            if attrs.get('data-vector-logo'):
+                self.assertTrue(attrs['src'].endswith('.svg'))
+                self.assertTrue((ROOT / attrs['src']).is_file())
+                self.assertNotIn('srcset', attrs)
+                self.assertNotIn('data-image', attrs)
+                continue  # Detailed vector structure checks live in test_logo_polish.
+            self.assertTrue(attrs.get('sizes'))
             variants = {v['path']: v for v in MANIFEST['images'][attrs['data-image']]['variants']}
             for candidate in attrs['srcset'].split(','):
                 file, descriptor = candidate.strip().split()
@@ -152,7 +158,7 @@ class AssetTests(unittest.TestCase):
         self.assertEqual(cache_paths, ['/assets/optimized/*', '/assets/fonts/*'])
         self.assertNotIn('/assets/image-manifest.json\n  Cache-Control', headers)
         for file in (ROOT / 'assets/optimized').iterdir():
-            self.assertRegex(file.name, r'-[0-9a-f]{12}\.(webp|png)$')
+            self.assertRegex(file.name, r'-[0-9a-f]{12}\.(webp|png|svg)$')
         self.assertIn('/robots.txt\n  Content-Type: text/plain', headers)
         self.assertIn('/sitemap.xml\n  Content-Type: application/xml', headers)
 
