@@ -139,9 +139,15 @@
           "width": 192,
           "height": 192,
           "bytes": 3000
+        },
+        {
+          "path": "assets/optimized/logo-384-b4e782931479.webp",
+          "width": 384,
+          "height": 384,
+          "bytes": 6774
         }
       ],
-      "full": "assets/optimized/logo-192-685c55c0e8b9.webp",
+      "full": "assets/optimized/logo-384-b4e782931479.webp",
       "favicon": {
         "path": "assets/optimized/favicon-64-9af8c018c6f3.png",
         "width": 64,

@@ -57,7 +57,7 @@ img{display:block;max-width:100%}
 .desktop{display:none}
 .header{position:fixed;z-index:100;top:0;left:0;right:0;padding:10px 0 env(safe-area-inset-top)}
 .nav{height:58px;border:1px solid rgba(255,255,255,.18);background:rgba(10,26,33,.22);backdrop-filter:blur(18px);border-radius:20px;display:flex;align-items:center;justify-content:space-between;padding:5px 7px 5px 12px;color:#fff;transition:.3s}
-.header.scrolled .nav{background:rgba(252,251,248,.96);border-color:var(--line);box-shadow:0 14px 40px rgba(17,40,49,.08);color:var(--ink)}
+.header.scrolled .nav{background:rgba(252,251,248,.96);border-color:var(--line);box-shadow:0 8px 24px rgba(17,40,49,.06);color:var(--ink)}
 .brand{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:800}
 .brand img{width:43px;height:43px;border-radius:14px;background:#fff;object-fit:contain}
 .head-btn{height:42px;padding:0 14px;border:0;border-radius:14px;background:#fff;color:var(--ink);font-weight:800;font-size:12px}
@@ -67,15 +67,15 @@ img{display:block;max-width:100%}
 .hamb:before,.hamb:after{content:"";position:absolute;right:0}
 .hamb:before{top:-6px}
 .hamb:after{top:6px}
-.drawer{position:fixed;top:77px;right:15px;left:15px;z-index:99;background:rgba(252,251,248,.98);border:1px solid var(--line);border-radius:22px;padding:7px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:.25s;box-shadow:0 24px 70px rgba(17,40,49,.12)}
+.drawer{position:fixed;top:77px;right:15px;left:15px;z-index:99;background:rgba(252,251,248,.98);border:1px solid var(--line);border-radius:22px;padding:7px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:.25s;box-shadow:0 12px 32px rgba(17,40,49,.08)}
 .drawer.open{opacity:1;visibility:visible;transform:none}
 .drawer a{display:block;padding:13px 14px;border-radius:15px;font-weight:700}
 .hero{min-height:74svh;background:#0c1b22;color:#fff;position:relative;overflow:hidden;display:flex;align-items:flex-end}
 .hero-media{position:absolute;inset:0}
 .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 48%;filter:saturate(.8) contrast(.97);transform:scale(1.04)}
 .hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,20,25,.08),rgba(8,20,25,.2) 34%,rgba(7,18,24,.9) 100%)}
-.hero-content{position:relative;z-index:2;width:min(760px,calc(100% - 30px));margin:auto;text-align:center;padding:88px 0 34px}
-.hero-logo{width:72px;height:72px;object-fit:contain;background:#fff;border-radius:22px;padding:4px;margin:0 auto 12px;box-shadow:0 18px 60px rgba(0,0,0,.24)}
+.hero-content{position:relative;z-index:2;width:min(760px,calc(100% - 30px));margin:auto;text-align:center;padding:72px 0 34px}
+.hero-logo{width:104px;height:104px;object-fit:contain;background:#fff;border-radius:18px;padding:2px;margin:0 auto 12px;box-shadow:0 8px 24px rgba(0,0,0,.14)}
 .pill{display:inline-flex;align-items:center;gap:7px;padding:6px 10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);border-radius:999px;font-size:12px;font-weight:700}
 .pill i{width:6px;height:6px;border-radius:50%;background:#cad6c6}
 .hero h1{font-family:Marhey,Cairo,sans-serif;font-weight:500;font-size:clamp(28px,8vw,36px);line-height:1.5;max-width:640px;margin:14px auto 10px;text-wrap:balance;text-shadow:0 12px 32px rgba(0,0,0,.25)}
@@ -88,7 +88,7 @@ img{display:block;max-width:100%}
 .hero-mini{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:16px}
 .mini{font-size:12px;padding:5px 9px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.07);border-radius:999px;color:rgba(255,255,255,.94)}
 .chooser-wrap{position:relative;z-index:5;margin-top:-25px}
-.chooser{background:#fff;border:1px solid var(--line);border-radius:22px;padding:13px;box-shadow:0 22px 60px rgba(17,40,49,.12)}
+.chooser{background:#fff;border:1px solid var(--line);border-radius:22px;padding:13px;box-shadow:0 12px 32px rgba(17,40,49,.08)}
 .chooser-title{text-align:center;margin-bottom:10px}
 .chooser-title small{display:block;color:var(--muted);font-size:12px}
 .chooser-title strong{display:block;font-size:16px}
@@ -104,7 +104,7 @@ section{padding:78px 0}
 .head p{font-size:16px;color:var(--muted);margin:0;text-wrap:pretty}
 .about{background:var(--cream)}
 .about-grid{display:grid;gap:28px;align-items:center}
-.about-photo img{width:100%;height:470px;object-fit:cover;border-radius:30px;box-shadow:0 24px 70px rgba(17,40,49,.12)}
+.about-photo img{width:100%;height:470px;object-fit:cover;border-radius:30px;box-shadow:0 12px 32px rgba(17,40,49,.08)}
 .about-copy .head{text-align:right;margin:0 0 17px}
 .about-body{font-size:16px;color:var(--muted);margin:0;text-wrap:pretty}
 .facts{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:17px}
@@ -112,7 +112,7 @@ section{padding:78px 0}
 .fact strong{display:block;font-size:14px}
 .fact span{display:block;color:var(--muted);font-size:13px}
 .units{background:#fff;padding-top:24px}
-.unit-card{border:1px solid var(--line);border-radius:34px;overflow:hidden;background:#fff;box-shadow:0 20px 55px rgba(17,40,49,.08);margin-top:28px}
+.unit-card{border:1px solid var(--line);border-radius:34px;overflow:hidden;background:#fff;box-shadow:0 10px 28px rgba(17,40,49,.05);margin-top:28px}
 .unit-card.alt{background:#f8f5ef}
 .unit-hero{position:relative;min-height:310px;color:#fff;display:flex;align-items:flex-end;overflow:hidden}
 .unit-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.82) contrast(.97)}
@@ -138,12 +138,12 @@ section{padding:78px 0}
 .gallery-label span{font-size:12px;color:var(--muted)}
 .gallery-track{display:grid;grid-auto-flow:column;grid-auto-columns:88%;gap:11px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:3px 1px 11px}
 .gallery-track::-webkit-scrollbar{display:none}
-.shot{position:relative;scroll-snap-align:start;border:0;padding:0;border-radius:25px;overflow:hidden;aspect-ratio:3/4;background:#ddd;box-shadow:0 17px 38px rgba(17,40,49,.11)}
+.shot{position:relative;scroll-snap-align:start;border:0;padding:0;border-radius:25px;overflow:hidden;aspect-ratio:3/4;background:#ddd;box-shadow:none}
 .shot img{width:100%;height:100%;object-fit:cover}
 .shot-label{position:absolute;right:11px;bottom:11px;background:rgba(13,29,36,.72);color:#fff;border-radius:12px;padding:6px 9px;font-size:12px}
 .gallery-hint{text-align:center;color:var(--muted);font-size:12px;margin-top:8px}
 .reserve{background:linear-gradient(180deg,#fff,#edf1ec)}
-.reserve-shell{background:linear-gradient(145deg,#1b343e,#10252d);border-radius:32px;padding:28px 16px;box-shadow:0 26px 75px rgba(16,38,47,.2);color:#fff}
+.reserve-shell{background:linear-gradient(145deg,#1b343e,#10252d);border-radius:32px;padding:28px 16px;box-shadow:0 16px 40px rgba(16,38,47,.12);color:#fff}
 .reserve-head{text-align:center;margin-bottom:21px}
 .reserve-head .eyebrow{color:#c6d0c1}
 .reserve-head h2{font-size:clamp(28px,7vw,42px);line-height:1.25;margin:5px 0;color:#fff}
@@ -164,7 +164,7 @@ section{padding:78px 0}
 .wa{display:inline-flex;align-items:center;justify-content:center;min-height:43px;padding:0 14px;border-radius:13px;background:var(--wa);color:#fff;font-size:14px;font-weight:800;width:100%}
 .location{background:var(--cream)}
 .loc-grid{display:grid;gap:12px}
-.loc-card,.map-card{background:#fff;border:1px solid var(--line);border-radius:25px;padding:20px;box-shadow:0 14px 38px rgba(17,40,49,.06)}
+.loc-card,.map-card{background:#fff;border:1px solid var(--line);border-radius:25px;padding:20px;box-shadow:0 8px 20px rgba(17,40,49,.04)}
 .loc-card h2{margin:0 0 6px;font-size:22px}
 .loc-card p{margin:0;color:var(--muted);font-size:16px}
 .loc-fact{padding:11px 0;border-top:1px solid var(--line);margin-top:12px}
@@ -178,11 +178,11 @@ section{padding:78px 0}
 footer{background:#10242c;color:#fff;padding:25px 0 95px}
 .footer{display:flex;flex-direction:column;gap:14px}
 .foot-brand{display:flex;align-items:center;gap:10px}
-.foot-brand img{width:42px;height:42px;border-radius:13px;background:#fff}
+.foot-brand img{width:48px;height:48px;flex-shrink:0;object-fit:contain;border-radius:13px;background:#fff}
 .foot-brand strong{display:block;font-size:14px}
 .foot-brand small{display:block;color:rgba(255,255,255,.85);font-size:12px}
 .foot-copy{font-size:12px;color:rgba(255,255,255,.85)}
-.dock{position:fixed;z-index:80;bottom:0;left:0;right:0;background:rgba(252,251,248,.96);border-top:1px solid var(--line);padding:8px 10px calc(8px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1.15fr 1fr;gap:8px;box-shadow:0 -12px 35px rgba(17,40,49,.08);backdrop-filter:blur(14px)}
+.dock{position:fixed;z-index:80;bottom:0;left:0;right:0;background:rgba(252,251,248,.96);border-top:1px solid var(--line);padding:8px 10px calc(8px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1.15fr 1fr;gap:8px;box-shadow:0 -6px 20px rgba(17,40,49,.04);backdrop-filter:blur(14px)}
 .dock a{min-height:47px;border-radius:15px;display:grid;place-items:center;font-size:14px;font-weight:800}
 .dock-book{background:var(--ink);color:#fff}
 .dock-wa{background:#e8f2eb;color:#1c6e3d;border:1px solid #cfe1d3}
@@ -198,7 +198,7 @@ footer{background:#10242c;color:#fff;padding:25px 0 95px}
  .menu,.drawer{display:none}
  .hero{min-height:80svh}
  .hero-content{padding-top:110px;padding-bottom:55px}
- .hero-logo{width:94px;height:94px}
+ .hero-logo{width:120px;height:120px}
  .hero h1{font-size:clamp(38px,4.4vw,52px);max-width:760px}
  .hero-actions .btn{min-height:48px;padding:0 18px}
  .about-grid{grid-template-columns:1.05fr .95fr}
@@ -219,14 +219,14 @@ footer{background:#10242c;color:#fff;padding:25px 0 95px}
 </head>
 <body>
 <header class="header" id="header"><div class="wrap"><div class="nav">
-<a class="brand" href="#home"><img src="assets/optimized/logo-96-f13412eb64b4.webp" alt="شعار غيم" data-image="logo.png" data-role="logo" srcset="assets/optimized/logo-96-f13412eb64b4.webp 96w, assets/optimized/logo-192-685c55c0e8b9.webp 192w" sizes="43px" width="96" height="96" decoding="async"><span>غيم للشقق المفروشة</span></a>
+<a class="brand" href="#home"><img src="assets/optimized/logo-96-f13412eb64b4.webp" alt="شعار غيم" data-image="logo.png" data-role="logo" srcset="assets/optimized/logo-96-f13412eb64b4.webp 96w, assets/optimized/logo-192-685c55c0e8b9.webp 192w, assets/optimized/logo-384-b4e782931479.webp 384w" sizes="43px" width="96" height="96" decoding="async"><span>غيم للشقق المفروشة</span></a>
 <nav class="desktop desktop-nav"><a href="#stays">الإقامات</a><a href="#about">عن غيم</a><a href="#gallery">الصور</a><a href="#booking">الحجز</a><a href="#location">الموقع</a></nav>
 <a class="head-btn" href="#booking">احجز الآن</a><button class="menu" id="menu" aria-label="القائمة"><span class="hamb"></span></button>
 </div></div><div class="drawer" id="drawer"><a href="#stays">الإقامات</a><a href="#about">عن غيم</a><a href="#gallery">الصور</a><a href="#booking">الحجز</a><a href="#location">الموقع</a></div></header>
 
 <main>
 <section class="hero" id="home"><div class="hero-media"><img src="assets/optimized/living-1-720-d7183259fa4c.webp" alt="صالة غيم" fetchpriority="high" data-image="living-1.jpg" data-role="hero" srcset="assets/optimized/living-1-480-8af1cd0ea55c.webp 480w, assets/optimized/living-1-720-d7183259fa4c.webp 720w" sizes="100vw" width="720" height="1280" decoding="async"></div><div class="hero-content">
-<img class="hero-logo" src="assets/optimized/logo-192-685c55c0e8b9.webp" alt="غيم" data-image="logo.png" data-role="hero-logo" srcset="assets/optimized/logo-96-f13412eb64b4.webp 96w, assets/optimized/logo-192-685c55c0e8b9.webp 192w" sizes="(min-width: 760px) 94px, 72px" width="192" height="192" decoding="async"><div class="pill"><i></i> القصيم · بريدة · حي الفايزية</div>
+<img class="hero-logo" src="assets/optimized/logo-192-685c55c0e8b9.webp" alt="غيم" data-image="logo.png" data-role="hero-logo" srcset="assets/optimized/logo-96-f13412eb64b4.webp 96w, assets/optimized/logo-192-685c55c0e8b9.webp 192w, assets/optimized/logo-384-b4e782931479.webp 384w" sizes="(min-width: 760px) 120px, 104px" width="192" height="192" decoding="async"><div class="pill"><i></i> القصيم · بريدة · حي الفايزية</div>
 <h1>غيم… إقامة هادئة في بريدة</h1>
 <p class="hero-description">شقتان مستقلتان في حي الفايزية، بتصميمين مختلفين وراحة تشبه البيت.</p>
 <div class="hero-actions"><a class="btn btn-white" href="#stays">استكشف الشقق</a><a class="btn btn-glass" href="https://wa.me/966562018166?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20إقامات%20غيم%20في%20بريدة" target="_blank" rel="noopener noreferrer">تواصل معنا</a></div>
@@ -311,7 +311,7 @@ footer{background:#10242c;color:#fff;padding:25px 0 95px}
 </div></section>
 </main>
 
-<footer><div class="wrap footer"><div class="foot-brand"><img src="assets/optimized/logo-96-f13412eb64b4.webp" alt="شعار غيم" data-image="logo.png" data-role="logo" srcset="assets/optimized/logo-96-f13412eb64b4.webp 96w, assets/optimized/logo-192-685c55c0e8b9.webp 192w" sizes="43px" width="96" height="96" decoding="async"><div><strong>غيم للشقق المفروشة</strong><small>مساحتك الهادئة في بريدة</small></div></div><div class="foot-copy">© 2026 غيم · جميع الحقوق محفوظة</div></div></footer>
+<footer><div class="wrap footer"><div class="foot-brand"><img src="assets/optimized/logo-96-f13412eb64b4.webp" alt="شعار غيم" data-image="logo.png" data-role="footer-logo" srcset="assets/optimized/logo-96-f13412eb64b4.webp 96w, assets/optimized/logo-192-685c55c0e8b9.webp 192w, assets/optimized/logo-384-b4e782931479.webp 384w" sizes="48px" width="96" height="96" decoding="async"><div><strong>غيم للشقق المفروشة</strong><small>مساحتك الهادئة في بريدة</small></div></div><div class="foot-copy">© 2026 غيم · جميع الحقوق محفوظة</div></div></footer>
 <div class="dock"><a class="dock-book" href="#booking">احجز الآن</a><a class="dock-wa" href="https://wa.me/966562018166?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20إقامات%20غيم%20في%20بريدة" target="_blank">واتساب</a></div>
 <div class="lightbox" id="lightbox"><button class="close" id="close" aria-label="إغلاق">×</button><img id="big" alt="صورة مكبرة"></div>
 <script>
