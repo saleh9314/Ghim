@@ -1,0 +1,291 @@
+{
+  "version": 1,
+  "format": "webp",
+  "quality": 84,
+  "images": {
+    "bedroom.jpg": {
+      "source_bytes": 73704,
+      "original_width": 720,
+      "original_height": 1280,
+      "variants": [
+        {
+          "path": "assets/optimized/bedroom-480-1ef57b4fb929.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 25746
+        },
+        {
+          "path": "assets/optimized/bedroom-720-c58ec6ca2b53.webp",
+          "width": 720,
+          "height": 1280,
+          "bytes": 50794
+        }
+      ],
+      "full": "assets/optimized/bedroom-720-c58ec6ca2b53.webp"
+    },
+    "coffee.jpg": {
+      "source_bytes": 92627,
+      "original_width": 960,
+      "original_height": 1280,
+      "variants": [
+        {
+          "path": "assets/optimized/coffee-480-b473d5de2fb8.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 21900
+        },
+        {
+          "path": "assets/optimized/coffee-960-e698a152e3ce.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 60952
+        }
+      ],
+      "full": "assets/optimized/coffee-960-e698a152e3ce.webp"
+    },
+    "dressing.jpg": {
+      "source_bytes": 100272,
+      "original_width": 960,
+      "original_height": 1280,
+      "variants": [
+        {
+          "path": "assets/optimized/dressing-480-df2f1c443027.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 22818
+        },
+        {
+          "path": "assets/optimized/dressing-960-a9c8521a602d.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 58492
+        }
+      ],
+      "full": "assets/optimized/dressing-960-a9c8521a602d.webp"
+    },
+    "entrance.jpg": {
+      "source_bytes": 71322,
+      "original_width": 960,
+      "original_height": 1280,
+      "variants": [
+        {
+          "path": "assets/optimized/entrance-480-c1427c12d002.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 14838
+        },
+        {
+          "path": "assets/optimized/entrance-960-b4181131e681.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 44224
+        }
+      ],
+      "full": "assets/optimized/entrance-960-b4181131e681.webp"
+    },
+    "living-1.jpg": {
+      "source_bytes": 93746,
+      "original_width": 720,
+      "original_height": 1280,
+      "variants": [
+        {
+          "path": "assets/optimized/living-1-480-8af1cd0ea55c.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 39396
+        },
+        {
+          "path": "assets/optimized/living-1-720-d7183259fa4c.webp",
+          "width": 720,
+          "height": 1280,
+          "bytes": 79756
+        }
+      ],
+      "full": "assets/optimized/living-1-720-d7183259fa4c.webp"
+    },
+    "living-2.jpg": {
+      "source_bytes": 78720,
+      "original_width": 720,
+      "original_height": 1280,
+      "variants": [
+        {
+          "path": "assets/optimized/living-2-480-72527e3945f8.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 30796
+        },
+        {
+          "path": "assets/optimized/living-2-720-cbe1840f83e1.webp",
+          "width": 720,
+          "height": 1280,
+          "bytes": 62718
+        }
+      ],
+      "full": "assets/optimized/living-2-720-cbe1840f83e1.webp"
+    },
+    "logo.png": {
+      "source_bytes": 545602,
+      "original_width": 1000,
+      "original_height": 1000,
+      "variants": [
+        {
+          "path": "assets/optimized/logo-96-f13412eb64b4.webp",
+          "width": 96,
+          "height": 96,
+          "bytes": 1354
+        },
+        {
+          "path": "assets/optimized/logo-192-685c55c0e8b9.webp",
+          "width": 192,
+          "height": 192,
+          "bytes": 3000
+        }
+      ],
+      "full": "assets/optimized/logo-192-685c55c0e8b9.webp",
+      "favicon": {
+        "path": "assets/optimized/favicon-64-9af8c018c6f3.png",
+        "width": 64,
+        "height": 64,
+        "bytes": 3612
+      }
+    },
+    "unit2-bedroom-wardrobe.jpeg": {
+      "source_bytes": 277716,
+      "original_width": 864,
+      "original_height": 1536,
+      "variants": [
+        {
+          "path": "assets/optimized/unit2-bedroom-wardrobe-480-1ac35cdd3e84.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 25490
+        },
+        {
+          "path": "assets/optimized/unit2-bedroom-wardrobe-864-802406294ef6.webp",
+          "width": 864,
+          "height": 1536,
+          "bytes": 63830
+        }
+      ],
+      "full": "assets/optimized/unit2-bedroom-wardrobe-864-802406294ef6.webp"
+    },
+    "unit2-bedroom.jpeg": {
+      "source_bytes": 392123,
+      "original_width": 864,
+      "original_height": 1536,
+      "variants": [
+        {
+          "path": "assets/optimized/unit2-bedroom-480-80518cc04751.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 35894
+        },
+        {
+          "path": "assets/optimized/unit2-bedroom-864-251e7fa9ab15.webp",
+          "width": 864,
+          "height": 1536,
+          "bytes": 100676
+        }
+      ],
+      "full": "assets/optimized/unit2-bedroom-864-251e7fa9ab15.webp"
+    },
+    "unit2-hospitality.jpg": {
+      "source_bytes": 2636964,
+      "original_width": 2268,
+      "original_height": 4032,
+      "variants": [
+        {
+          "path": "assets/optimized/unit2-hospitality-480-831a7ab94618.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 25408
+        },
+        {
+          "path": "assets/optimized/unit2-hospitality-960-0ce1331e5ab9.webp",
+          "width": 960,
+          "height": 1707,
+          "bytes": 71904
+        },
+        {
+          "path": "assets/optimized/unit2-hospitality-1440-a50df724bdbf.webp",
+          "width": 1440,
+          "height": 2560,
+          "bytes": 132214
+        }
+      ],
+      "full": "assets/optimized/unit2-hospitality-1440-a50df724bdbf.webp"
+    },
+    "unit2-lounge-2.jpg": {
+      "source_bytes": 2797620,
+      "original_width": 2268,
+      "original_height": 4032,
+      "variants": [
+        {
+          "path": "assets/optimized/unit2-lounge-2-480-c0d6880dc1a2.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 21498
+        },
+        {
+          "path": "assets/optimized/unit2-lounge-2-960-358ac14946c9.webp",
+          "width": 960,
+          "height": 1707,
+          "bytes": 70664
+        },
+        {
+          "path": "assets/optimized/unit2-lounge-2-1440-40b1e2d4b509.webp",
+          "width": 1440,
+          "height": 2560,
+          "bytes": 155394
+        }
+      ],
+      "full": "assets/optimized/unit2-lounge-2-1440-40b1e2d4b509.webp"
+    },
+    "unit2-lounge.jpg": {
+      "source_bytes": 2899193,
+      "original_width": 2268,
+      "original_height": 4032,
+      "variants": [
+        {
+          "path": "assets/optimized/unit2-lounge-480-7164410ce76c.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 31226
+        },
+        {
+          "path": "assets/optimized/unit2-lounge-960-e2e2c62cb82a.webp",
+          "width": 960,
+          "height": 1707,
+          "bytes": 113820
+        },
+        {
+          "path": "assets/optimized/unit2-lounge-1440-f01f67c49fd1.webp",
+          "width": 1440,
+          "height": 2560,
+          "bytes": 229864
+        }
+      ],
+      "full": "assets/optimized/unit2-lounge-1440-f01f67c49fd1.webp"
+    },
+    "unit2-room-detail.jpeg": {
+      "source_bytes": 354374,
+      "original_width": 864,
+      "original_height": 1536,
+      "variants": [
+        {
+          "path": "assets/optimized/unit2-room-detail-480-1b12ff08c41d.webp",
+          "width": 480,
+          "height": 853,
+          "bytes": 36580
+        },
+        {
+          "path": "assets/optimized/unit2-room-detail-864-f8ab601c7004.webp",
+          "width": 864,
+          "height": 1536,
+          "bytes": 96872
+        }
+      ],
+      "full": "assets/optimized/unit2-room-detail-864-f8ab601c7004.webp"
+    }
+  }
+}
