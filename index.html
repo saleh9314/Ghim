@@ -164,6 +164,7 @@ section{padding:78px 0}
 .go{font-size:12px;color:#cad6c6}
 .direct{margin-top:12px;padding:13px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);text-align:center}
 .direct strong{font-size:14px;display:block;margin-bottom:7px}
+.direct-phone{display:block;direction:ltr;font-size:12px;color:rgba(255,255,255,.88);margin-top:7px}
 .wa{display:inline-flex;align-items:center;justify-content:center;min-height:43px;padding:0 14px;border-radius:13px;background:var(--wa);color:#fff;font-size:14px;font-weight:800;width:100%}
 .location{background:var(--cream)}
 .loc-grid{display:grid;gap:12px}
@@ -193,7 +194,7 @@ footer{background:#10242c;color:#fff;padding:25px 0 95px}
 .lightbox.open{opacity:1;visibility:visible}
 .lightbox img{max-width:100%;max-height:86svh;border-radius:18px}
 .close{position:absolute;top:15px;right:15px;width:44px;height:44px;border-radius:14px;background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.16);font-size:28px}
-@media(max-width:359px){.brand span{display:none}}
+@media(max-width:419px){.brand span{display:none}}
 @media(min-width:760px){
  body{padding-bottom:0}
  .wrap{width:min(1120px,calc(100% - 48px))}
@@ -225,32 +226,31 @@ footer{background:#10242c;color:#fff;padding:25px 0 95px}
 <header class="header" id="header"><div class="wrap"><div class="nav">
 <a class="brand" href="#home" aria-label="غيم للشقق المفروشة"><img class="brand-light" src="assets/optimized/ghim-light-76ab49deaac5.svg" alt="" data-vector-logo="light" width="662" height="341" decoding="async" aria-hidden="true"><img class="brand-dark" src="assets/optimized/ghim-dark-8a360395f5de.svg" alt="" data-vector-logo="dark" width="662" height="341" decoding="async" aria-hidden="true"><span>غيم للشقق المفروشة</span></a>
 <nav class="desktop desktop-nav"><a href="#stays">الإقامات</a><a href="#about">عن غيم</a><a href="#gallery">الصور</a><a href="#booking">الحجز</a><a href="#location">الموقع</a></nav>
-<a class="head-btn" href="#booking">احجز الآن</a><button class="menu" id="menu" aria-label="القائمة"><span class="hamb"></span></button>
+<a class="head-btn" href="#booking">خيارات الحجز</a><button class="menu" id="menu" aria-label="القائمة"><span class="hamb"></span></button>
 </div></div><div class="drawer" id="drawer"><a href="#stays">الإقامات</a><a href="#about">عن غيم</a><a href="#gallery">الصور</a><a href="#booking">الحجز</a><a href="#location">الموقع</a></div></header>
 
 <main>
 <section class="hero" id="home"><div class="hero-media"><img src="assets/optimized/living-1-720-d7183259fa4c.webp" alt="صالة غيم" fetchpriority="high" data-image="living-1.jpg" data-role="hero" srcset="assets/optimized/living-1-480-8af1cd0ea55c.webp 480w, assets/optimized/living-1-720-d7183259fa4c.webp 720w" sizes="100vw" width="720" height="1280" decoding="async"></div><div class="hero-content">
-<img class="hero-logo" src="assets/optimized/ghim-light-76ab49deaac5.svg" alt="غيم" data-vector-logo="light" width="662" height="341" decoding="async"><div class="pill"><i></i> القصيم · بريدة · حي الفايزية</div>
-<h1>غيم… إقامة هادئة في بريدة</h1>
-<p class="hero-description">شقتان مستقلتان في حي الفايزية، بتصميمين مختلفين وراحة تشبه البيت.</p>
-<div class="hero-actions"><a class="btn btn-white" href="#stays">استكشف الشقق</a><a class="btn btn-glass" href="https://wa.me/966562018166?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20إقامات%20غيم%20في%20بريدة" target="_blank" rel="noopener noreferrer">تواصل معنا</a></div>
-<div class="hero-mini"><span class="mini">شقتان مستقلتان</span><span class="mini">دخول ذاتي</span><span class="mini">واي فاي</span><span class="mini">موقف مجاني</span></div>
+<img class="hero-logo" src="assets/optimized/ghim-light-76ab49deaac5.svg" alt="غيم" data-vector-logo="light" width="662" height="341" decoding="async"><div class="pill"><i></i> بريدة · حي الفايزية</div>
+<h1>غيم… راحتك في بريدة</h1>
+<p class="hero-description">شقتان مفروشتان بخصوصية ودخول ذاتي.</p>
+<div class="hero-actions"><a class="btn btn-white" href="#stays">اكتشف الشقق</a><a class="btn btn-glass" href="https://wa.me/966562018166?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20إقامات%20غيم%20في%20بريدة" target="_blank" rel="noopener noreferrer">تواصل معنا</a></div>
+<div class="hero-mini"><span class="mini">دخول ذاتي</span><span class="mini">واي فاي</span><span class="mini">موقف مجاني</span></div>
 </div></section>
 
-<div class="wrap chooser-wrap"><div class="chooser"><div class="chooser-title"><small>غيم للشقق المفروشة</small><strong>اختر الإقامة التي تناسبك</strong></div><div class="unit-pills">
-<a class="unit-pill primary" href="#unit1">غيم 01<small>التصميم الهادئ الدافئ</small></a><a class="unit-pill" href="#unit2">غيم 02<small>تصميم عصري مختلف</small></a>
+<div class="wrap chooser-wrap"><div class="chooser"><div class="chooser-title"><small>غيم للشقق المفروشة</small><strong>اختر طابع إقامتك</strong></div><div class="unit-pills">
+<a class="unit-pill primary" href="#unit1">غيم 01<small>طابع دافئ</small></a><a class="unit-pill" href="#unit2">غيم 02<small>طابع عصري</small></a>
 </div></div></div>
 
 <section class="about" id="about"><div class="wrap about-grid"><div class="about-photo"><img src="assets/optimized/living-2-720-cbe1840f83e1.webp" alt="جلسة غيم" loading="lazy" data-image="living-2.jpg" data-role="about" srcset="assets/optimized/living-2-480-72527e3945f8.webp 480w, assets/optimized/living-2-720-cbe1840f83e1.webp 720w" sizes="(min-width: 1168px) 588px, (min-width: 760px) calc((100vw - 48px) * 0.525), calc(100vw - 30px)" width="720" height="1280" decoding="async"></div><div class="about-copy">
-<div class="head"><div class="eyebrow">غيم · BURAIDAH</div><h2>راحة تشبه البيت، وأناقة تستحق الإقامة.</h2><p>في غيم، جمعنا بين الهدوء والراحة واللمسات الأنيقة لنقدم لك تجربة إقامة واضحة، مرتبة، ومريحة.</p></div>
-<p class="about-body">سواء كانت إقامتك قصيرة أو لعدة أيام، ستجد مساحة مستقلة وتجربة حجز سهلة عبر منصات موثوقة، مع خيار التواصل المباشر عبر واتساب.</p>
-<div class="facts"><div class="fact"><strong>إقامتان مستقلتان</strong><span>تصميمان مختلفان تحت هوية غيم</span></div><div class="fact"><strong>حجز مرن</strong><span>منصات موثوقة أو واتساب</span></div><div class="fact"><strong>موقع واضح</strong><span>حي الفايزية · بريدة</span></div><div class="fact"><strong>خصوصية وهدوء</strong><span>أجواء مناسبة للإقامة القصيرة</span></div></div>
+<div class="head"><div class="eyebrow">عن غيم</div><h2>مساحتك الخاصة</h2><p>شقق مستقلة بتصميمين مختلفين، مع واي فاي وموقف مجاني.</p></div>
+<div class="facts"><div class="fact"><strong>إقامة مستقلة</strong><span>شقة كاملة لك</span></div><div class="fact"><strong>دخول ذاتي</strong><span>دخولك دون استقبال</span></div><div class="fact"><strong>موقف مجاني</strong><span>للضيوف</span></div><div class="fact"><strong>خيارات الحجز</strong><span>عبر المنصات أو واتساب</span></div></div>
 </div></div></section>
 
-<section class="units" id="stays"><div class="wrap"><div class="head"><div class="eyebrow">إقامات غيم</div><h2>إقامتان… بطابعين مختلفين</h2><p>تعرّف على تفاصيل كل شقة وخدماتها، ثم شاهد صورها واختر الإقامة التي تناسبك.</p></div>
+<section class="units" id="stays"><div class="wrap"><div class="head"><div class="eyebrow">شقق غيم</div><h2>شقتان، بطابعين</h2><p>قارن المواصفات واختر شقتك.</p></div>
 <!-- مواصفات الوحدتين موثقة من إعلانات Airbnb المرتبطة بالموقع؛ راجع docs/brand-spec.md. -->
 <article class="unit-card" id="unit1">
-<div class="unit-hero"><img src="assets/optimized/living-1-720-d7183259fa4c.webp" alt="غيم 01 - الصالة" loading="lazy" data-image="living-1.jpg" data-role="unit" srcset="assets/optimized/living-1-480-8af1cd0ea55c.webp 480w, assets/optimized/living-1-720-d7183259fa4c.webp 720w" sizes="(min-width: 1168px) 588px, (min-width: 760px) calc((100vw - 48px) * 0.525), calc(100vw - 30px)" width="720" height="1280" decoding="async"><div class="unit-hero-content"><div class="unit-number">GHIM · 01</div><h3>غيم 01</h3><p>تصميم دافئ، مع صالة وركن قهوة ومطبخ مجهز.</p></div></div>
+<div class="unit-hero"><img src="assets/optimized/living-1-720-d7183259fa4c.webp" alt="غيم 01 - الصالة" loading="lazy" data-image="living-1.jpg" data-role="unit" srcset="assets/optimized/living-1-480-8af1cd0ea55c.webp 480w, assets/optimized/living-1-720-d7183259fa4c.webp 720w" sizes="(min-width: 1168px) 588px, (min-width: 760px) calc((100vw - 48px) * 0.525), calc(100vw - 30px)" width="720" height="1280" decoding="async"><div class="unit-hero-content"><div class="unit-number">GHIM · 01</div><h3>غيم 01</h3><p>طابع دافئ، مع ركن قهوة ومطبخ مجهز.</p></div></div>
 <div class="unit-body">
 <dl class="unit-meta" aria-label="مواصفات غيم 01">
 <div class="meta"><dt>الضيوف</dt><dd>حتى 3 ضيوف</dd></div>
@@ -259,10 +259,10 @@ footer{background:#10242c;color:#fff;padding:25px 0 95px}
 <div class="meta"><dt>دورة المياه</dt><dd>حمام واحد</dd></div>
 </dl>
 <ul class="unit-amenities" aria-label="خدمات غيم 01"><li>مطبخ مجهز</li><li>ركن قهوة</li><li>واي فاي</li><li>دخول ذاتي</li><li>موقف مجاني</li></ul>
-<div class="unit-actions"><a class="btn" style="background:var(--ink);color:#fff" href="#booking" data-book="1">احجز غيم 01</a><a class="btn subtle" href="#gallery1">شاهد الصور</a><a class="btn" style="background:#fff;border-color:var(--line)" href="https://wa.me/966562018166?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20غيم%2001" target="_blank">واتساب ↗</a></div>
+<div class="unit-actions"><a class="btn" style="background:var(--ink);color:#fff" href="#booking" data-book="1" aria-label="خيارات الحجز لغيم 01">خيارات الحجز</a><a class="btn subtle" href="#gallery1">شاهد الصور</a><a class="btn" style="background:#fff;border-color:var(--line)" href="https://wa.me/966562018166?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20غيم%2001" target="_blank">واتساب ↗</a></div>
 </div></article>
 <article class="unit-card alt" id="unit2">
-<div class="unit-hero"><img src="assets/optimized/unit2-lounge-960-e2e2c62cb82a.webp" alt="غيم 02 - الجلسة" loading="lazy" data-image="unit2-lounge.jpg" data-role="unit" srcset="assets/optimized/unit2-lounge-480-7164410ce76c.webp 480w, assets/optimized/unit2-lounge-960-e2e2c62cb82a.webp 960w, assets/optimized/unit2-lounge-1440-f01f67c49fd1.webp 1440w" sizes="(min-width: 1168px) 588px, (min-width: 760px) calc((100vw - 48px) * 0.525), calc(100vw - 30px)" width="960" height="1707" decoding="async"><div class="unit-hero-content"><div class="unit-number">GHIM · 02</div><h3>غيم 02</h3><p>صالة عصرية، مع مطبخ ببار ومساحة مخصصة للعمل.</p></div></div>
+<div class="unit-hero"><img src="assets/optimized/unit2-lounge-960-e2e2c62cb82a.webp" alt="غيم 02 - الجلسة" loading="lazy" data-image="unit2-lounge.jpg" data-role="unit" srcset="assets/optimized/unit2-lounge-480-7164410ce76c.webp 480w, assets/optimized/unit2-lounge-960-e2e2c62cb82a.webp 960w, assets/optimized/unit2-lounge-1440-f01f67c49fd1.webp 1440w" sizes="(min-width: 1168px) 588px, (min-width: 760px) calc((100vw - 48px) * 0.525), calc(100vw - 30px)" width="960" height="1707" decoding="async"><div class="unit-hero-content"><div class="unit-number">GHIM · 02</div><h3>غيم 02</h3><p>طابع عصري، مع مطبخ ببار ومساحة للعمل.</p></div></div>
 <div class="unit-body">
 <dl class="unit-meta" aria-label="مواصفات غيم 02">
 <div class="meta"><dt>الضيوف</dt><dd>حتى 3 ضيوف</dd></div>
@@ -271,52 +271,52 @@ footer{background:#10242c;color:#fff;padding:25px 0 95px}
 <div class="meta"><dt>دورة المياه</dt><dd>حمام واحد</dd></div>
 </dl>
 <ul class="unit-amenities" aria-label="خدمات غيم 02"><li>مطبخ ببار</li><li>مساحة للعمل</li><li>واي فاي</li><li>دخول ذاتي</li><li>موقف مجاني</li></ul>
-<div class="unit-actions"><a class="btn" style="background:var(--ink);color:#fff" href="#booking" data-book="2">احجز غيم 02</a><a class="btn subtle" href="#gallery2">شاهد الصور</a><a class="btn" style="background:#fff;border-color:var(--line)" href="https://wa.me/966562018166?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20غيم%2002" target="_blank">واتساب ↗</a></div>
+<div class="unit-actions"><a class="btn" style="background:var(--ink);color:#fff" href="#booking" data-book="2" aria-label="خيارات الحجز لغيم 02">خيارات الحجز</a><a class="btn subtle" href="#gallery2">شاهد الصور</a><a class="btn" style="background:#fff;border-color:var(--line)" href="https://wa.me/966562018166?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20غيم%2002" target="_blank">واتساب ↗</a></div>
 </div></article>
 </div></section>
 
-<section class="gallery" id="gallery"><div class="wrap"><div class="head"><div class="eyebrow">تفاصيل غيم</div><h2>شاهد كل إقامة قبل وصولك</h2><p>صور حقيقية لكل وحدة، مع معرض مستقل حتى تعرف بالضبط ما الذي تحجزه.</p></div>
-<div class="gallery-block" id="gallery1"><div class="gallery-label"><h3>غيم 01</h3><span>المعرض الأول</span></div><div class="gallery-track">
+<section class="gallery" id="gallery"><div class="wrap"><div class="head"><div class="eyebrow">صور الشقق</div><h2>غيم عن قرب</h2><p>صور فعلية لكل شقة.</p></div>
+<div class="gallery-block" id="gallery1"><div class="gallery-label"><h3>غيم 01</h3></div><div class="gallery-track">
 <button class="shot" data-full="assets/optimized/living-1-720-d7183259fa4c.webp" data-image="living-1.jpg"><img src="assets/optimized/living-1-720-d7183259fa4c.webp" alt="غيم 01 - الصالة" loading="lazy" data-image="living-1.jpg" data-role="gallery" srcset="assets/optimized/living-1-480-8af1cd0ea55c.webp 480w, assets/optimized/living-1-720-d7183259fa4c.webp 720w" sizes="(min-width: 1168px) 269px, (min-width: 1040px) calc((100vw - 48px) * 0.24), (min-width: 760px) calc((100vw - 48px) * 0.31), calc((100vw - 30px) * 0.88)" width="720" height="1280" decoding="async"><span class="shot-label">الصالة</span></button>
 <button class="shot" data-full="assets/optimized/living-2-720-cbe1840f83e1.webp" data-image="living-2.jpg"><img src="assets/optimized/living-2-720-cbe1840f83e1.webp" alt="غيم 01 - الجلسة" loading="lazy" data-image="living-2.jpg" data-role="gallery" srcset="assets/optimized/living-2-480-72527e3945f8.webp 480w, assets/optimized/living-2-720-cbe1840f83e1.webp 720w" sizes="(min-width: 1168px) 269px, (min-width: 1040px) calc((100vw - 48px) * 0.24), (min-width: 760px) calc((100vw - 48px) * 0.31), calc((100vw - 30px) * 0.88)" width="720" height="1280" decoding="async"><span class="shot-label">الجلسة</span></button>
 <button class="shot" data-full="assets/optimized/bedroom-720-c58ec6ca2b53.webp" data-image="bedroom.jpg"><img src="assets/optimized/bedroom-720-c58ec6ca2b53.webp" alt="غيم 01 - غرفة النوم" loading="lazy" data-image="bedroom.jpg" data-role="gallery" srcset="assets/optimized/bedroom-480-1ef57b4fb929.webp 480w, assets/optimized/bedroom-720-c58ec6ca2b53.webp 720w" sizes="(min-width: 1168px) 269px, (min-width: 1040px) calc((100vw - 48px) * 0.24), (min-width: 760px) calc((100vw - 48px) * 0.31), calc((100vw - 30px) * 0.88)" width="720" height="1280" decoding="async"><span class="shot-label">غرفة النوم</span></button>
 <button class="shot" data-full="assets/optimized/dressing-960-a9c8521a602d.webp" data-image="dressing.jpg"><img src="assets/optimized/dressing-960-a9c8521a602d.webp" alt="غيم 01 - التفاصيل" loading="lazy" data-image="dressing.jpg" data-role="gallery" srcset="assets/optimized/dressing-480-df2f1c443027.webp 480w, assets/optimized/dressing-960-a9c8521a602d.webp 960w" sizes="(min-width: 1168px) 269px, (min-width: 1040px) calc((100vw - 48px) * 0.24), (min-width: 760px) calc((100vw - 48px) * 0.31), calc((100vw - 30px) * 0.88)" width="960" height="1280" decoding="async"><span class="shot-label">التفاصيل</span></button>
 <button class="shot" data-full="assets/optimized/coffee-960-e698a152e3ce.webp" data-image="coffee.jpg"><img src="assets/optimized/coffee-960-e698a152e3ce.webp" alt="غيم 01 - ركن القهوة" loading="lazy" data-image="coffee.jpg" data-role="gallery" srcset="assets/optimized/coffee-480-b473d5de2fb8.webp 480w, assets/optimized/coffee-960-e698a152e3ce.webp 960w" sizes="(min-width: 1168px) 269px, (min-width: 1040px) calc((100vw - 48px) * 0.24), (min-width: 760px) calc((100vw - 48px) * 0.31), calc((100vw - 30px) * 0.88)" width="960" height="1280" decoding="async"><span class="shot-label">ركن القهوة</span></button>
 <button class="shot" data-full="assets/optimized/entrance-960-b4181131e681.webp" data-image="entrance.jpg"><img src="assets/optimized/entrance-960-b4181131e681.webp" alt="غيم 01 - المدخل" loading="lazy" data-image="entrance.jpg" data-role="gallery" srcset="assets/optimized/entrance-480-c1427c12d002.webp 480w, assets/optimized/entrance-960-b4181131e681.webp 960w" sizes="(min-width: 1168px) 269px, (min-width: 1040px) calc((100vw - 48px) * 0.24), (min-width: 760px) calc((100vw - 48px) * 0.31), calc((100vw - 30px) * 0.88)" width="960" height="1280" decoding="async"><span class="shot-label">المدخل</span></button>
-</div><div class="gallery-hint">اسحب يمينًا ويسارًا · واضغط على الصورة لتكبيرها</div></div>
-<div class="gallery-block" id="gallery2"><div class="gallery-label"><h3>غيم 02</h3><span>المعرض الثاني</span></div><div class="gallery-track">
+</div><div class="gallery-hint">اضغط على الصورة لتكبيرها.</div></div>
+<div class="gallery-block" id="gallery2"><div class="gallery-label"><h3>غيم 02</h3></div><div class="gallery-track">
 <button class="shot" data-full="assets/optimized/unit2-lounge-1440-f01f67c49fd1.webp" data-image="unit2-lounge.jpg"><img src="assets/optimized/unit2-lounge-960-e2e2c62cb82a.webp" alt="غيم 02 - الجلسة" loading="lazy" data-image="unit2-lounge.jpg" data-role="gallery" srcset="assets/optimized/unit2-lounge-480-7164410ce76c.webp 480w, assets/optimized/unit2-lounge-960-e2e2c62cb82a.webp 960w, assets/optimized/unit2-lounge-1440-f01f67c49fd1.webp 1440w" sizes="(min-width: 1168px) 269px, (min-width: 1040px) calc((100vw - 48px) * 0.24), (min-width: 760px) calc((100vw - 48px) * 0.31), calc((100vw - 30px) * 0.88)" width="960" height="1707" decoding="async"><span class="shot-label">الجلسة</span></button>
 <button class="shot" data-full="assets/optimized/unit2-hospitality-1440-a50df724bdbf.webp" data-image="unit2-hospitality.jpg"><img src="assets/optimized/unit2-hospitality-960-0ce1331e5ab9.webp" alt="غيم 02 - تفاصيل الضيافة" loading="lazy" data-image="unit2-hospitality.jpg" data-role="gallery" srcset="assets/optimized/unit2-hospitality-480-831a7ab94618.webp 480w, assets/optimized/unit2-hospitality-960-0ce1331e5ab9.webp 960w, assets/optimized/unit2-hospitality-1440-a50df724bdbf.webp 1440w" sizes="(min-width: 1168px) 269px, (min-width: 1040px) calc((100vw - 48px) * 0.24), (min-width: 760px) calc((100vw - 48px) * 0.31), calc((100vw - 30px) * 0.88)" width="960" height="1707" decoding="async"><span class="shot-label">تفاصيل الضيافة</span></button>
 <button class="shot" data-full="assets/optimized/unit2-bedroom-wardrobe-864-802406294ef6.webp" data-image="unit2-bedroom-wardrobe.jpeg"><img src="assets/optimized/unit2-bedroom-wardrobe-864-802406294ef6.webp" alt="غيم 02 - غرفة النوم والخزانة" loading="lazy" data-image="unit2-bedroom-wardrobe.jpeg" data-role="gallery" srcset="assets/optimized/unit2-bedroom-wardrobe-480-1ac35cdd3e84.webp 480w, assets/optimized/unit2-bedroom-wardrobe-864-802406294ef6.webp 864w" sizes="(min-width: 1168px) 269px, (min-width: 1040px) calc((100vw - 48px) * 0.24), (min-width: 760px) calc((100vw - 48px) * 0.31), calc((100vw - 30px) * 0.88)" width="864" height="1536" decoding="async"><span class="shot-label">غرفة النوم والخزانة</span></button>
 <button class="shot" data-full="assets/optimized/unit2-bedroom-864-251e7fa9ab15.webp" data-image="unit2-bedroom.jpeg"><img src="assets/optimized/unit2-bedroom-864-251e7fa9ab15.webp" alt="غيم 02 - السرير" loading="lazy" data-image="unit2-bedroom.jpeg" data-role="gallery" srcset="assets/optimized/unit2-bedroom-480-80518cc04751.webp 480w, assets/optimized/unit2-bedroom-864-251e7fa9ab15.webp 864w" sizes="(min-width: 1168px) 269px, (min-width: 1040px) calc((100vw - 48px) * 0.24), (min-width: 760px) calc((100vw - 48px) * 0.31), calc((100vw - 30px) * 0.88)" width="864" height="1536" decoding="async"><span class="shot-label">غرفة النوم</span></button>
 <button class="shot" data-full="assets/optimized/unit2-lounge-2-1440-40b1e2d4b509.webp" data-image="unit2-lounge-2.jpg"><img src="assets/optimized/unit2-lounge-2-960-358ac14946c9.webp" alt="غيم 02 - الجلسة" loading="lazy" data-image="unit2-lounge-2.jpg" data-role="gallery" srcset="assets/optimized/unit2-lounge-2-480-c0d6880dc1a2.webp 480w, assets/optimized/unit2-lounge-2-960-358ac14946c9.webp 960w, assets/optimized/unit2-lounge-2-1440-40b1e2d4b509.webp 1440w" sizes="(min-width: 1168px) 269px, (min-width: 1040px) calc((100vw - 48px) * 0.24), (min-width: 760px) calc((100vw - 48px) * 0.31), calc((100vw - 30px) * 0.88)" width="960" height="1707" decoding="async"><span class="shot-label">الجلسة</span></button>
 <button class="shot" data-full="assets/optimized/unit2-room-detail-864-f8ab601c7004.webp" data-image="unit2-room-detail.jpeg"><img src="assets/optimized/unit2-room-detail-864-f8ab601c7004.webp" alt="غيم 02 - تفاصيل الغرفة" loading="lazy" data-image="unit2-room-detail.jpeg" data-role="gallery" srcset="assets/optimized/unit2-room-detail-480-1b12ff08c41d.webp 480w, assets/optimized/unit2-room-detail-864-f8ab601c7004.webp 864w" sizes="(min-width: 1168px) 269px, (min-width: 1040px) calc((100vw - 48px) * 0.24), (min-width: 760px) calc((100vw - 48px) * 0.31), calc((100vw - 30px) * 0.88)" width="864" height="1536" decoding="async"><span class="shot-label">تفاصيل الغرفة</span></button>
-</div><div class="gallery-hint">اسحب يمينًا ويسارًا · واضغط على الصورة لتكبيرها</div></div>
+</div><div class="gallery-hint">اضغط على الصورة لتكبيرها.</div></div>
 </div></section>
 
-<section class="reserve" id="booking"><div class="wrap"><div class="reserve-shell"><div class="reserve-head"><div class="eyebrow">احجز بسهولة</div><h2>اختر الوحدة ثم منصة الحجز</h2><p>كل وحدة لها روابطها الخاصة عبر المنصات التي تفضلها.</p></div>
+<section class="reserve" id="booking"><div class="wrap"><div class="reserve-shell"><div class="reserve-head"><div class="eyebrow">خيارات الحجز</div><h2>اختر شقتك ومنصة الحجز</h2><p>شاهد الأسعار والتوافر على منصة الحجز.</p></div>
 <div class="booking-tabs"><button class="booking-tab active" data-tab="1">غيم 01</button><button class="booking-tab" data-tab="2">غيم 02</button></div>
 <div class="book-panel active" id="book1"><div class="channels">
-<a class="channel" href="https://gathern.co/link/view?id=195865&check_in=2026-09-28&check_out=2026-09-29" target="_blank"><div class="channel-logo">ج</div><div><h3>جاذر إن</h3><p>الحجز عبر صفحة غيم 01</p></div><span class="go">فتح ↗</span></a>
-<a class="channel" href="https://www.airbnb.com/h/ghiim" target="_blank"><div class="channel-logo">A</div><div><h3>Airbnb</h3><p>التفاصيل والتوافر</p></div><span class="go">فتح ↗</span></a>
-<a class="channel" href="https://www.booking.com/Share-6bHACM" target="_blank"><div class="channel-logo">B</div><div><h3>Booking.com</h3><p>الحجز عبر Booking</p></div><span class="go">فتح ↗</span></a>
-</div><div class="direct"><strong>تفضّل الاستفسار أو الحجز مباشرة؟</strong><a class="wa" href="https://wa.me/966562018166?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20غيم%2001" target="_blank">واتساب · 056 201 8166 ↗</a></div></div>
+<a class="channel" href="https://gathern.co/link/view?id=195865&check_in=2026-09-28&check_out=2026-09-29" target="_blank"><div class="channel-logo">ج</div><div><h3>جاذر إن</h3><p>صفحة غيم 01</p></div><span class="go">زيارة المنصة ↗</span></a>
+<a class="channel" href="https://www.airbnb.com/h/ghiim" target="_blank"><div class="channel-logo">A</div><div><h3>Airbnb</h3><p>صفحة غيم 01</p></div><span class="go">زيارة المنصة ↗</span></a>
+<a class="channel" href="https://www.booking.com/Share-6bHACM" target="_blank"><div class="channel-logo">B</div><div><h3>Booking.com</h3><p>صفحة غيم 01</p></div><span class="go">زيارة المنصة ↗</span></a>
+</div><div class="direct"><strong>للاستفسار والحجز المباشر</strong><a class="wa" href="https://wa.me/966562018166?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20غيم%2001" target="_blank">تواصل عبر واتساب ↗</a><small class="direct-phone">056 201 8166</small></div></div>
 <div class="book-panel" id="book2"><div class="channels">
-<a class="channel" href="https://gathern.co/link/view?id=244148&check_in=2026-09-28&check_out=2026-09-29" target="_blank"><div class="channel-logo">ج</div><div><h3>جاذر إن</h3><p>الحجز عبر صفحة غيم 02</p></div><span class="go">فتح ↗</span></a>
-<a class="channel" href="https://www.airbnb.com/h/gheem2" target="_blank"><div class="channel-logo">A</div><div><h3>Airbnb</h3><p>التفاصيل والتوافر</p></div><span class="go">فتح ↗</span></a>
-<a class="channel" href="https://www.booking.com/Share-EbD7TB" target="_blank"><div class="channel-logo">B</div><div><h3>Booking.com</h3><p>الحجز عبر Booking</p></div><span class="go">فتح ↗</span></a>
-</div><div class="direct"><strong>تفضّل الاستفسار أو الحجز مباشرة؟</strong><a class="wa" href="https://wa.me/966562018166?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20غيم%2002" target="_blank">واتساب · 056 201 8166 ↗</a></div></div>
+<a class="channel" href="https://gathern.co/link/view?id=244148&check_in=2026-09-28&check_out=2026-09-29" target="_blank"><div class="channel-logo">ج</div><div><h3>جاذر إن</h3><p>صفحة غيم 02</p></div><span class="go">زيارة المنصة ↗</span></a>
+<a class="channel" href="https://www.airbnb.com/h/gheem2" target="_blank"><div class="channel-logo">A</div><div><h3>Airbnb</h3><p>صفحة غيم 02</p></div><span class="go">زيارة المنصة ↗</span></a>
+<a class="channel" href="https://www.booking.com/Share-EbD7TB" target="_blank"><div class="channel-logo">B</div><div><h3>Booking.com</h3><p>صفحة غيم 02</p></div><span class="go">زيارة المنصة ↗</span></a>
+</div><div class="direct"><strong>للاستفسار والحجز المباشر</strong><a class="wa" href="https://wa.me/966562018166?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20غيم%2002" target="_blank">تواصل عبر واتساب ↗</a><small class="direct-phone">056 201 8166</small></div></div>
 </div></div></section>
 
-<section class="location" id="location"><div class="wrap"><div class="head"><div class="eyebrow">الوصول إلى غيم</div><h2>موقع واضح وسهل الوصول</h2><p>القصيم · بريدة · حي الفايزية</p></div>
-<div class="loc-grid"><div class="loc-card"><h2>غيم في بريدة</h2><p>افتح التوجيهات مباشرة في Google Maps للوصول إلى موقع الشقق.</p><div class="loc-fact"><small>العنوان</small><strong>القصيم · بريدة · حي الفايزية</strong></div>
-<a class="btn" style="background:var(--ink);color:#fff;width:100%;margin-top:7px" href="https://maps.google.com/?q=26.376101,43.971199" target="_blank">فتح الموقع في Google Maps ↗</a></div>
-<div class="map-card"><div><div class="pin">⌖</div><h3>غيم للشقق المفروشة</h3><p>حي الفايزية · بريدة</p><a class="btn" style="background:#fff;color:var(--ink);border-color:var(--line)" href="https://maps.google.com/?q=26.376101,43.971199" target="_blank">عرض التوجيهات</a></div></div></div>
+<section class="location" id="location"><div class="wrap"><div class="head"><div class="eyebrow">الموقع</div><h2>غيم في الفايزية</h2><p>حي الفايزية · بريدة</p></div>
+<div class="loc-grid"><div class="loc-card"><h2>غيم في بريدة</h2><p>افتح الخريطة للوصول إلى الشقق.</p><div class="loc-fact"><small>العنوان</small><strong>القصيم · بريدة · حي الفايزية</strong></div>
+<a class="btn" style="background:var(--ink);color:#fff;width:100%;margin-top:7px" href="https://maps.google.com/?q=26.376101,43.971199" target="_blank">الموقع على الخريطة ↗</a></div>
+<div class="map-card"><div><div class="pin">⌖</div><h3>غيم للشقق المفروشة</h3><p>حي الفايزية · بريدة</p><a class="btn" style="background:#fff;color:var(--ink);border-color:var(--line)" href="https://maps.google.com/?q=26.376101,43.971199" target="_blank">الاتجاهات إلى غيم</a></div></div></div>
 </div></section>
 </main>
 
 <footer><div class="wrap footer"><div class="foot-brand"><img class="footer-logo" src="assets/optimized/ghim-light-76ab49deaac5.svg" alt="شعار غيم" data-vector-logo="light" width="662" height="341" decoding="async"><div><strong>غيم للشقق المفروشة</strong><small>مساحتك الهادئة في بريدة</small></div></div><div class="foot-copy">© 2026 غيم · جميع الحقوق محفوظة</div></div></footer>
-<div class="dock"><a class="dock-book" href="#booking">احجز الآن</a><a class="dock-wa" href="https://wa.me/966562018166?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20إقامات%20غيم%20في%20بريدة" target="_blank">واتساب</a></div>
+<div class="dock"><a class="dock-book" href="#booking">خيارات الحجز</a><a class="dock-wa" href="https://wa.me/966562018166?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20إقامات%20غيم%20في%20بريدة" target="_blank">واتساب</a></div>
 <div class="lightbox" id="lightbox"><button class="close" id="close" aria-label="إغلاق">×</button><img id="big" alt="صورة مكبرة"></div>
 <script>
 const header=document.getElementById('header'),menu=document.getElementById('menu'),drawer=document.getElementById('drawer');
