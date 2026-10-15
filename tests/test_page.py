@@ -24,9 +24,10 @@ PAGE.feed(HTML)
 
 class PageTests(unittest.TestCase):
     def test_short_showcase_hero(self):
-        self.assertIn('<h1>غيم… إقامة هادئة في بريدة</h1>', HTML)
+        self.assertIn('<h1>غيم… راحتك في بريدة</h1>', HTML)
         self.assertIn('class="hero-description"', HTML)
-        self.assertIn('href="#stays">استكشف الشقق</a>', HTML)
+        self.assertIn('شقتان مفروشتان بخصوصية ودخول ذاتي.', HTML)
+        self.assertIn('href="#stays">اكتشف الشقق</a>', HTML)
         self.assertIn('>تواصل معنا</a>', HTML)
 
     def test_verified_unit_details(self):

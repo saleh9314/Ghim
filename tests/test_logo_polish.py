@@ -80,7 +80,7 @@ class LogoPolishTests(unittest.TestCase):
         self.assertEqual(declarations('.header.scrolled .brand-light')['display'], 'none')
         self.assertEqual(declarations('.header.scrolled .brand-dark')['display'], 'block')
         self.assertIn('aria-label="غيم للشقق المفروشة"', HTML)
-        self.assertIn('@media(max-width:359px){.brand span{display:none}}', CSS)
+        self.assertIn('@media(max-width:419px){.brand span{display:none}}', CSS)
         for attrs in LOGOS:
             if attrs['class'].startswith('brand-'):
                 self.assertEqual(attrs.get('alt'), '')
