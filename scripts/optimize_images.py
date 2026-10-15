@@ -23,8 +23,9 @@ SIZES = {
     'about': '(min-width: 1168px) 588px, (min-width: 760px) calc((100vw - 48px) * 0.525), calc(100vw - 30px)',
     'unit': '(min-width: 1168px) 588px, (min-width: 760px) calc((100vw - 48px) * 0.525), calc(100vw - 30px)',
     'gallery': '(min-width: 1168px) 269px, (min-width: 1040px) calc((100vw - 48px) * 0.24), (min-width: 760px) calc((100vw - 48px) * 0.31), calc((100vw - 30px) * 0.88)',
-    'hero-logo': '(min-width: 760px) 94px, 72px',
+    'hero-logo': '(min-width: 760px) 120px, 104px',
     'logo': '43px',
+    'footer-logo': '48px',
 }
 
 
@@ -67,7 +68,8 @@ def generate():
             else:
                 image = image.convert('RGBA' if 'A' in image.getbands() else 'RGB')
             if source.name == 'logo.png':
-                widths = (96, 192)
+                # Up to 3x density for the 120px hero logo; keep small header files.
+                widths = (96, 192, 384)
             else:
                 widths = sorted({min(w, image.width) for w in WIDTHS})
             variants = [make_variant(source.stem, image, w) for w in widths]
@@ -114,7 +116,7 @@ def update_markup(manifest):
         default = variants[-1] if role == 'hero' else next(
             (v for v in variants if v['width'] >= 960), variants[-1])
         if original == 'logo.png':
-            default = variants[-1] if role == 'hero-logo' else variants[0]
+            default = next(v for v in variants if v['width'] >= 192) if role == 'hero-logo' else variants[0]
         attrs.update(src=default['path'],
                      srcset=', '.join(f'{v["path"]} {v["width"]}w' for v in variants),
                      sizes=SIZES[role], width=str(default['width']),
