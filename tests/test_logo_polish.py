@@ -1,30 +1,33 @@
-"""Focused checks for the bounded logo and shadow polish."""
+"""Focused checks for the vector wordmark and preserved shadow polish."""
+from hashlib import sha256
 from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
 import unittest
+import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 HTML = (ROOT / 'index.html').read_text(encoding='utf-8')
 CSS = re.search(r'<style>([\s\S]*?)</style>', HTML).group(1)
 MOBILE, DESKTOP = CSS.split('@media(min-width:760px){', 1)
-MANIFEST = json.loads((ROOT / 'assets/image-manifest.json').read_text())
+MANIFEST = json.loads((ROOT / 'assets/brand/logo-manifest.json').read_text())
+NS = '{http://www.w3.org/2000/svg}'
 
 
 class Images(HTMLParser):
     def __init__(self):
         super().__init__()
-        self.roles = {}
+        self.items = []
         self.feed(HTML)
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
-        if tag == 'img' and attrs.get('data-image') == 'logo.png':
-            self.roles[attrs['data-role']] = attrs
+        if tag == 'img' and attrs.get('data-vector-logo'):
+            self.items.append(attrs)
 
 
-LOGOS = Images().roles
+LOGOS = Images().items
 
 
 def declarations(selector, css=MOBILE):
@@ -35,40 +38,81 @@ def declarations(selector, css=MOBILE):
 
 
 class LogoPolishTests(unittest.TestCase):
-    def test_logo_sizes_by_placement(self):
-        for selector, expected, css in [
-            ('.hero-logo', '104px', MOBILE),
-            ('.hero-logo', '120px', DESKTOP),
-            ('.brand img', '43px', MOBILE),
-            ('.foot-brand img', '48px', MOBILE),
+    def test_logo_sizes_by_placement_preserve_aspect_ratio(self):
+        for selector, width, height, css in [
+            ('.hero-logo', '210px', 'auto', MOBILE),
+            ('.hero-logo', '244px', 'auto', DESKTOP),
+            ('.brand img', '64px', '33px', MOBILE),
+            ('.foot-brand img', '88px', 'auto', MOBILE),
         ]:
             rule = declarations(selector, css)
-            self.assertEqual(rule['width'], expected)
-            self.assertEqual(rule['height'], expected)
+            self.assertEqual(rule['width'], width)
+            self.assertEqual(rule['height'], height)
+        self.assertEqual(declarations('.hero-logo')['aspect-ratio'], '662/341')
+        self.assertEqual(declarations('.foot-brand img')['aspect-ratio'], '662/341')
 
-    def test_hero_container_has_less_padding_and_softer_shadow(self):
+    def test_transparent_wordmark_has_no_square_badge(self):
+        for selector in ('.hero-logo', '.brand img', '.foot-brand img'):
+            rule = declarations(selector)
+            self.assertEqual(rule['object-fit'], 'contain')
+            self.assertEqual(rule['background'], 'none')
+            self.assertEqual(rule['border-radius'], '0')
         rule = declarations('.hero-logo')
-        self.assertEqual(rule['object-fit'], 'contain')
-        self.assertEqual(rule['background'], '#fff')
-        self.assertEqual(rule['padding'], '2px')
-        self.assertEqual(rule['border-radius'], '18px')
-        self.assertEqual(rule['box-shadow'], '0 8px 24px rgba(0,0,0,.14)')
+        self.assertEqual(rule['padding'], '0')
+        self.assertEqual(rule['box-shadow'], 'none')
         self.assertEqual(declarations('.hero-content')['padding'], '72px 0 34px')
 
-    def test_srcset_matches_larger_logo_without_heavy_original(self):
-        self.assertEqual(set(LOGOS), {'logo', 'hero-logo', 'footer-logo'})
-        self.assertEqual(LOGOS['hero-logo']['sizes'], '(min-width: 760px) 120px, 104px')
-        self.assertEqual(LOGOS['logo']['sizes'], '43px')
-        self.assertEqual(LOGOS['footer-logo']['sizes'], '48px')
-        variants = MANIFEST['images']['logo.png']['variants']
-        self.assertEqual([v['width'] for v in variants], [96, 192, 384])
-        self.assertGreaterEqual(variants[-1]['width'], 120 * 3)
-        self.assertLess(variants[-1]['bytes'], 12000)
-        self.assertLess(variants[0]['bytes'], 2000)
-        for attrs in LOGOS.values():
-            self.assertIn('384w', attrs['srcset'])
-            self.assertTrue(attrs['src'].endswith('.webp'))
-            self.assertNotEqual(attrs['src'], 'assets/logo.png')
+    def test_site_uses_fingerprinted_vectors_with_reserved_dimensions(self):
+        self.assertEqual(len(LOGOS), 4)
+        for attrs in LOGOS:
+            variant = MANIFEST['variants'][attrs['data-vector-logo']]
+            self.assertEqual(attrs['src'], variant['path'])
+            self.assertEqual(int(attrs['width']), MANIFEST['width'])
+            self.assertEqual(int(attrs['height']), MANIFEST['height'])
+            self.assertEqual(attrs.get('decoding'), 'async')
+            self.assertNotIn('srcset', attrs)
+            self.assertNotIn('data-image', attrs)
+            self.assertNotIn('sizes', attrs)
+        self.assertNotRegex(HTML, r'<img[^>]*data-image="logo.png"')
+
+    def test_header_switches_light_and_dark_without_new_javascript(self):
+        self.assertEqual(declarations('.brand .brand-dark')['display'], 'none')
+        self.assertEqual(declarations('.header.scrolled .brand-light')['display'], 'none')
+        self.assertEqual(declarations('.header.scrolled .brand-dark')['display'], 'block')
+        self.assertIn('aria-label="غيم للشقق المفروشة"', HTML)
+        self.assertIn('@media(max-width:359px){.brand span{display:none}}', CSS)
+        for attrs in LOGOS:
+            if attrs['class'].startswith('brand-'):
+                self.assertEqual(attrs.get('alt'), '')
+                self.assertEqual(attrs.get('aria-hidden'), 'true')
+
+    def test_vector_files_are_editable_safe_and_transparent(self):
+        for variant in MANIFEST['variants'].values():
+            content = (ROOT / variant['path']).read_bytes()
+            self.assertEqual(content, (ROOT / variant['master']).read_bytes())
+            self.assertEqual(len(content), variant['bytes'])
+            self.assertIn(sha256(content).hexdigest()[:12], variant['path'])
+            self.assertLess(len(content), 5000)
+            root = ET.fromstring(content)
+            self.assertEqual(root.tag, NS + 'svg')
+            self.assertEqual(root.get('viewBox'), '0 0 662 341')
+            names = {node.tag.removeprefix(NS) for node in root.iter()}
+            self.assertEqual(names, {'svg', 'title', 'desc', 'g', 'path'})
+            self.assertNotIn(b'data:image', content)
+            groups = {node.get('id'): node for node in root.findall(NS + 'g')}
+            self.assertEqual(set(groups), {'wordmark', 'cloud'})
+            for name, color in variant['colors'].items():
+                self.assertEqual(groups[name].get('fill'), color)
+                paths = groups[name].findall(NS + 'path')
+                self.assertTrue(paths)
+                self.assertTrue(all('c' in path.get('d', '') for path in paths))
+            self.assertEqual(root.find(NS + 'title').text, 'غيم')
+
+    def test_original_circular_logo_and_favicon_remain(self):
+        self.assertEqual(sha256((ROOT / MANIFEST['source']).read_bytes()).hexdigest(), MANIFEST['source_sha256'])
+        self.assertIn('favicon-64-', HTML)
+        self.assertEqual(MANIFEST['source_wordmark_bounds'], [191, 296, 805, 589])
+        self.assertEqual(MANIFEST['clearspace'], 24)
 
     def test_secondary_shadows_are_softened(self):
         expected = {
@@ -84,7 +128,6 @@ class LogoPolishTests(unittest.TestCase):
         }
         for selector, shadow in expected.items():
             self.assertEqual(declarations(selector)['box-shadow'], shadow)
-        # Preserve readable text shadows rather than weakening image contrast.
         self.assertEqual(declarations('.hero-description')['text-shadow'], '0 2px 12px rgba(0,0,0,.4)')
 
     def test_round_cards_and_original_image_treatments_remain(self):

@@ -1,0 +1,34 @@
+{
+  "source": "assets/logo.png",
+  "source_sha256": "b1a254189bc4ac8b6da98b7ae1fc9466f3337454f968310fcead815f9c094ecc",
+  "source_wordmark_bounds": [
+    191,
+    296,
+    805,
+    589
+  ],
+  "clearspace": 24,
+  "width": 662,
+  "height": 341,
+  "method": "Potrace 1.16 vector trace",
+  "variants": {
+    "dark": {
+      "master": "assets/brand/ghim-dark.svg",
+      "path": "assets/optimized/ghim-dark-8a360395f5de.svg",
+      "bytes": 2773,
+      "colors": {
+        "wordmark": "#19313a",
+        "cloud": "#9aac97"
+      }
+    },
+    "light": {
+      "master": "assets/brand/ghim-light.svg",
+      "path": "assets/optimized/ghim-light-76ab49deaac5.svg",
+      "bytes": 2773,
+      "colors": {
+        "wordmark": "#ffffff",
+        "cloud": "#cad6c6"
+      }
+    }
+  }
+}

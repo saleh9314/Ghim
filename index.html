@@ -59,7 +59,10 @@ img{display:block;max-width:100%}
 .nav{height:58px;border:1px solid rgba(255,255,255,.18);background:rgba(10,26,33,.22);backdrop-filter:blur(18px);border-radius:20px;display:flex;align-items:center;justify-content:space-between;padding:5px 7px 5px 12px;color:#fff;transition:.3s}
 .header.scrolled .nav{background:rgba(252,251,248,.96);border-color:var(--line);box-shadow:0 8px 24px rgba(17,40,49,.06);color:var(--ink)}
 .brand{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:800}
-.brand img{width:43px;height:43px;border-radius:14px;background:#fff;object-fit:contain}
+.brand img{width:64px;height:33px;flex-shrink:0;object-fit:contain;background:none;border-radius:0}
+.brand .brand-dark{display:none}
+.header.scrolled .brand-light{display:none}
+.header.scrolled .brand-dark{display:block}
 .head-btn{height:42px;padding:0 14px;border:0;border-radius:14px;background:#fff;color:var(--ink);font-weight:800;font-size:12px}
 .header.scrolled .head-btn{background:var(--ink);color:#fff}
 .menu{width:42px;height:42px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:inherit;border-radius:14px;display:grid;place-items:center;flex-shrink:0}
@@ -75,7 +78,7 @@ img{display:block;max-width:100%}
 .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 48%;filter:saturate(.8) contrast(.97);transform:scale(1.04)}
 .hero-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,20,25,.08),rgba(8,20,25,.2) 34%,rgba(7,18,24,.9) 100%)}
 .hero-content{position:relative;z-index:2;width:min(760px,calc(100% - 30px));margin:auto;text-align:center;padding:72px 0 34px}
-.hero-logo{width:104px;height:104px;object-fit:contain;background:#fff;border-radius:18px;padding:2px;margin:0 auto 12px;box-shadow:0 8px 24px rgba(0,0,0,.14)}
+.hero-logo{width:210px;height:auto;aspect-ratio:662/341;object-fit:contain;background:none;border-radius:0;padding:0;margin:0 auto 16px;box-shadow:none;filter:drop-shadow(0 2px 8px rgba(0,0,0,.22))}
 .pill{display:inline-flex;align-items:center;gap:7px;padding:6px 10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);border-radius:999px;font-size:12px;font-weight:700}
 .pill i{width:6px;height:6px;border-radius:50%;background:#cad6c6}
 .hero h1{font-family:Marhey,Cairo,sans-serif;font-weight:500;font-size:clamp(28px,8vw,36px);line-height:1.5;max-width:640px;margin:14px auto 10px;text-wrap:balance;text-shadow:0 12px 32px rgba(0,0,0,.25)}
@@ -178,7 +181,7 @@ section{padding:78px 0}
 footer{background:#10242c;color:#fff;padding:25px 0 95px}
 .footer{display:flex;flex-direction:column;gap:14px}
 .foot-brand{display:flex;align-items:center;gap:10px}
-.foot-brand img{width:48px;height:48px;flex-shrink:0;object-fit:contain;border-radius:13px;background:#fff}
+.foot-brand img{width:88px;height:auto;aspect-ratio:662/341;flex-shrink:0;object-fit:contain;border-radius:0;background:none}
 .foot-brand strong{display:block;font-size:14px}
 .foot-brand small{display:block;color:rgba(255,255,255,.85);font-size:12px}
 .foot-copy{font-size:12px;color:rgba(255,255,255,.85)}
@@ -190,6 +193,7 @@ footer{background:#10242c;color:#fff;padding:25px 0 95px}
 .lightbox.open{opacity:1;visibility:visible}
 .lightbox img{max-width:100%;max-height:86svh;border-radius:18px}
 .close{position:absolute;top:15px;right:15px;width:44px;height:44px;border-radius:14px;background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.16);font-size:28px}
+@media(max-width:359px){.brand span{display:none}}
 @media(min-width:760px){
  body{padding-bottom:0}
  .wrap{width:min(1120px,calc(100% - 48px))}
@@ -198,7 +202,7 @@ footer{background:#10242c;color:#fff;padding:25px 0 95px}
  .menu,.drawer{display:none}
  .hero{min-height:80svh}
  .hero-content{padding-top:110px;padding-bottom:55px}
- .hero-logo{width:120px;height:120px}
+ .hero-logo{width:244px;height:auto}
  .hero h1{font-size:clamp(38px,4.4vw,52px);max-width:760px}
  .hero-actions .btn{min-height:48px;padding:0 18px}
  .about-grid{grid-template-columns:1.05fr .95fr}
@@ -219,14 +223,14 @@ footer{background:#10242c;color:#fff;padding:25px 0 95px}
 </head>
 <body>
 <header class="header" id="header"><div class="wrap"><div class="nav">
-<a class="brand" href="#home"><img src="assets/optimized/logo-96-f13412eb64b4.webp" alt="شعار غيم" data-image="logo.png" data-role="logo" srcset="assets/optimized/logo-96-f13412eb64b4.webp 96w, assets/optimized/logo-192-685c55c0e8b9.webp 192w, assets/optimized/logo-384-b4e782931479.webp 384w" sizes="43px" width="96" height="96" decoding="async"><span>غيم للشقق المفروشة</span></a>
+<a class="brand" href="#home" aria-label="غيم للشقق المفروشة"><img class="brand-light" src="assets/optimized/ghim-light-76ab49deaac5.svg" alt="" data-vector-logo="light" width="662" height="341" decoding="async" aria-hidden="true"><img class="brand-dark" src="assets/optimized/ghim-dark-8a360395f5de.svg" alt="" data-vector-logo="dark" width="662" height="341" decoding="async" aria-hidden="true"><span>غيم للشقق المفروشة</span></a>
 <nav class="desktop desktop-nav"><a href="#stays">الإقامات</a><a href="#about">عن غيم</a><a href="#gallery">الصور</a><a href="#booking">الحجز</a><a href="#location">الموقع</a></nav>
 <a class="head-btn" href="#booking">احجز الآن</a><button class="menu" id="menu" aria-label="القائمة"><span class="hamb"></span></button>
 </div></div><div class="drawer" id="drawer"><a href="#stays">الإقامات</a><a href="#about">عن غيم</a><a href="#gallery">الصور</a><a href="#booking">الحجز</a><a href="#location">الموقع</a></div></header>
 
 <main>
 <section class="hero" id="home"><div class="hero-media"><img src="assets/optimized/living-1-720-d7183259fa4c.webp" alt="صالة غيم" fetchpriority="high" data-image="living-1.jpg" data-role="hero" srcset="assets/optimized/living-1-480-8af1cd0ea55c.webp 480w, assets/optimized/living-1-720-d7183259fa4c.webp 720w" sizes="100vw" width="720" height="1280" decoding="async"></div><div class="hero-content">
-<img class="hero-logo" src="assets/optimized/logo-192-685c55c0e8b9.webp" alt="غيم" data-image="logo.png" data-role="hero-logo" srcset="assets/optimized/logo-96-f13412eb64b4.webp 96w, assets/optimized/logo-192-685c55c0e8b9.webp 192w, assets/optimized/logo-384-b4e782931479.webp 384w" sizes="(min-width: 760px) 120px, 104px" width="192" height="192" decoding="async"><div class="pill"><i></i> القصيم · بريدة · حي الفايزية</div>
+<img class="hero-logo" src="assets/optimized/ghim-light-76ab49deaac5.svg" alt="غيم" data-vector-logo="light" width="662" height="341" decoding="async"><div class="pill"><i></i> القصيم · بريدة · حي الفايزية</div>
 <h1>غيم… إقامة هادئة في بريدة</h1>
 <p class="hero-description">شقتان مستقلتان في حي الفايزية، بتصميمين مختلفين وراحة تشبه البيت.</p>
 <div class="hero-actions"><a class="btn btn-white" href="#stays">استكشف الشقق</a><a class="btn btn-glass" href="https://wa.me/966562018166?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20إقامات%20غيم%20في%20بريدة" target="_blank" rel="noopener noreferrer">تواصل معنا</a></div>
@@ -311,7 +315,7 @@ footer{background:#10242c;color:#fff;padding:25px 0 95px}
 </div></section>
 </main>
 
-<footer><div class="wrap footer"><div class="foot-brand"><img src="assets/optimized/logo-96-f13412eb64b4.webp" alt="شعار غيم" data-image="logo.png" data-role="footer-logo" srcset="assets/optimized/logo-96-f13412eb64b4.webp 96w, assets/optimized/logo-192-685c55c0e8b9.webp 192w, assets/optimized/logo-384-b4e782931479.webp 384w" sizes="48px" width="96" height="96" decoding="async"><div><strong>غيم للشقق المفروشة</strong><small>مساحتك الهادئة في بريدة</small></div></div><div class="foot-copy">© 2026 غيم · جميع الحقوق محفوظة</div></div></footer>
+<footer><div class="wrap footer"><div class="foot-brand"><img class="footer-logo" src="assets/optimized/ghim-light-76ab49deaac5.svg" alt="شعار غيم" data-vector-logo="light" width="662" height="341" decoding="async"><div><strong>غيم للشقق المفروشة</strong><small>مساحتك الهادئة في بريدة</small></div></div><div class="foot-copy">© 2026 غيم · جميع الحقوق محفوظة</div></div></footer>
 <div class="dock"><a class="dock-book" href="#booking">احجز الآن</a><a class="dock-wa" href="https://wa.me/966562018166?text=السلام%20عليكم،%20أرغب%20بالاستفسار%20عن%20إقامات%20غيم%20في%20بريدة" target="_blank">واتساب</a></div>
 <div class="lightbox" id="lightbox"><button class="close" id="close" aria-label="إغلاق">×</button><img id="big" alt="صورة مكبرة"></div>
 <script>
