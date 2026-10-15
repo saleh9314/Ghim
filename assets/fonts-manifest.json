@@ -1,0 +1,74 @@
+{
+  "source_css": "https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Marhey:wght@500&display=swap",
+  "fonts": [
+    {
+      "family": "Cairo",
+      "subset": "arabic",
+      "path": "assets/fonts/cairo-arabic-748022f50c42.woff2",
+      "bytes": 30896,
+      "source": "https://fonts.gstatic.com/s/cairo/v31/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscQyyS4J0.woff2",
+      "weights": [
+        "400",
+        "600",
+        "700",
+        "800"
+      ]
+    },
+    {
+      "family": "Cairo",
+      "subset": "latin-ext",
+      "path": "assets/fonts/cairo-latin-ext-da6ada83c3a8.woff2",
+      "bytes": 16648,
+      "source": "https://fonts.gstatic.com/s/cairo/v31/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscSCyS4J0.woff2",
+      "weights": [
+        "400",
+        "600",
+        "700",
+        "800"
+      ]
+    },
+    {
+      "family": "Cairo",
+      "subset": "latin",
+      "path": "assets/fonts/cairo-latin-82c13cbd1352.woff2",
+      "bytes": 33820,
+      "source": "https://fonts.gstatic.com/s/cairo/v31/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscRiyS.woff2",
+      "weights": [
+        "400",
+        "600",
+        "700",
+        "800"
+      ]
+    },
+    {
+      "family": "Marhey",
+      "subset": "arabic",
+      "path": "assets/fonts/marhey-arabic-340217f3a6c7.woff2",
+      "bytes": 16040,
+      "source": "https://fonts.gstatic.com/s/marhey/v8/x3d8ck7Laq-T7wl7mqfVrEe9sDvtBflwC2UdiVev.woff2",
+      "weights": [
+        "500"
+      ]
+    },
+    {
+      "family": "Marhey",
+      "subset": "latin-ext",
+      "path": "assets/fonts/marhey-latin-ext-89c501d6c483.woff2",
+      "bytes": 7820,
+      "source": "https://fonts.gstatic.com/s/marhey/v8/x3d8ck7Laq-T7wl7mqfVrEe9sDvtBflwC24diVev.woff2",
+      "weights": [
+        "500"
+      ]
+    },
+    {
+      "family": "Marhey",
+      "subset": "latin",
+      "path": "assets/fonts/marhey-latin-540f5c953ed7.woff2",
+      "bytes": 15624,
+      "source": "https://fonts.gstatic.com/s/marhey/v8/x3d8ck7Laq-T7wl7mqfVrEe9sDvtBflwC2AdiQ.woff2",
+      "weights": [
+        "500"
+      ]
+    }
+  ]
+}
